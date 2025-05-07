@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "primaryFont";
+  src: url("./fonts/RubicaPersonalUseOnly-0vaqo.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "secondaryFont";
+  src: url("./fonts/OFL.md") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+/* * typography */
+@layer utilities {
+  .text-stroke {
+    color: transparent;
+    color: #e2e2e2;
+ 
+  }
+}
+
+/* * animation slide-right */
+
+
+.slide-left {
+  -webkit-animation: swing-left-bck 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    forwards;
+  animation: swing-left-bck 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.slide-in-right {
+  animation: slide-right 0.4s ease both ;
+}
+.slide-in-left {
+  animation: slide-left 0.4s ease both forwards;
+}
+
+@keyframes slide-right {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+.cardImg{
+  transition: all .3s ease ;
+  /* transform: scale(0.8); */
+}
+.wrapperCardImg:hover .cardImg{
+  transition: all .3s ease ;
+  transform: scale(0.9);
+}
