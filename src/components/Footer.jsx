@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
-// import "./../styles/Footimport { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CustomEase } from "gsap";
-import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect } from "react";
 
 const Footer = () => {
-  useEffect(() => {
-    // Footer SVG animation
+  useEffect(() => { 
     const footerPaths = document.querySelectorAll(".footer-svg-paths path");
 
     footerPaths.forEach((path, index) => {

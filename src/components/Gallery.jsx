@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
-// import "./gallery.css";
 import { gsap } from "gsap";
 
 const Gallery = () => {
   useEffect(() => {
-    // Gallery animations
     const galleryItems = document.querySelectorAll(".gallery-item img");
 
     galleryItems.forEach((item, index) => {

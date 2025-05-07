@@ -1,19 +1,19 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// src/App.js
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import {Home} from './pages'
-
-
+import { About, Customer, Home, Services } from "./pages";
 
 function App() {
-
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/customer" element={<Customer />} />
+      </Routes>
+    </>
   );
 }
 

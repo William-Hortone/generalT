@@ -1,21 +1,18 @@
-import React, { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CustomEase } from "gsap/CustomEase";
 import Lenis from "@studio-freight/lenis";
+import { gsap } from "gsap";
+import { CustomEase } from "gsap/CustomEase";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   useEffect(() => {
-    // Initialize GSAP plugins
     gsap.registerPlugin(ScrollTrigger, CustomEase);
 
-    // Initialize Lenis for smooth scrolling
-    // const lenis = new Lenis();
-    // Inside your useEffect hook
     const lenis = new Lenis({
-      lerp: 0.1, // Lower values make scroll more immediate (default: 0.1)
-      smoothWheel: true, // Enable smooth wheel scrolling
-      infinite: false, // Disable infinite scrolling
+      lerp: 0.1,
+      smoothWheel: true,
+      infinite: false,
     });
 
     const scrollIndicator = document.querySelector(".scroll-indicator");
@@ -23,19 +20,13 @@ const Header = () => {
     const updateScrollProgress = () => {
       const scrollHeight = document.documentElement.scrollHeight;
       const windowHeight = window.innerHeight;
-      const scrollY = lenis.scroll; // use Lenis scroll value
+      const scrollY = lenis.scroll;
 
       const progress = (scrollY / (scrollHeight - windowHeight)) * 100;
       if (scrollIndicator) {
         scrollIndicator.style.width = `${progress}%`;
       }
     };
-
-    // const raf = (time) => {
-    //   lenis.raf(time);
-    //   updateScrollProgress(); // sync progress bar with scroll
-    //   requestAnimationFrame(raf);
-    // };
 
     // Optimized RAF handling
     const raf = (time) => {
@@ -51,9 +42,6 @@ const Header = () => {
     CustomEase.create("verticalEase", "0.4, 0, 0.2, 1");
     CustomEase.create("blurEase", "0.65, 0, 0.35, 1");
     CustomEase.create("svgEase", "0.25, 0.1, 0.25, 1");
-
-
- 
 
     // Menu hover effects
     const navLinks = document.querySelectorAll(".nav-links a");
@@ -89,7 +77,7 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <div className="logo">ARTISTRY</div>
+        <div className="logo">GTTK</div>
         <div className="get-in-touch">
           <a href="#contact">+GET IN TOUCH</a>
           <div className="yellow-line-container">
@@ -97,8 +85,11 @@ const Header = () => {
           </div>
         </div>
         <div className="nav-links">
-          <a href="#home">home</a> <a href="#about">about</a>
-          <a href="#portfolio">portfolio</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+           <a href="#about">Customer</a>
+          {/* <a href="#portfolio">portfolio</a> */}
         </div>
       </div>
     </header>
@@ -106,4 +97,3 @@ const Header = () => {
 };
 
 export default Header;
-

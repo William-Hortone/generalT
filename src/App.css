@@ -313,6 +313,7 @@ header {
 .svg-container {
   position: relative;
   overflow: hidden;
+  /* background-color: #FFD700; */
 }
 
 .svg-texture-overlay {

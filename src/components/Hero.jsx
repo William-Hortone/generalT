@@ -1,11 +1,8 @@
-import React, { useEffect, useRef } from "react";
-// import "./hero.css";
-// import gsap from "gsap";
 import { gsap } from "gsap";
+import React, { useEffect } from "react";
 
 const Hero = () => {
   useEffect(() => {
-    // Hero animations
     gsap.to(".hero-image", {
       scrollTrigger: {
         trigger: ".hero",
@@ -40,7 +37,7 @@ const Hero = () => {
         <div className="row row-svg">
           <div className="col-12">
             <div className="svg-container">
-              <svg
+              {/* <svg
                 width="100%"
                 height="auto"
                 viewBox="0 0 113 19"
@@ -56,7 +53,47 @@ const Hero = () => {
                   <path d="m17.9397 18v-17.159973h8.088c3.816 0 6.12 1.776003 6.12 4.896003 0 2.4-1.344 3.816-3.48 4.29597v.048c4.296.744 2.736 7.392 3.72 7.68v.24h-4.488c-.84-.72.72-5.976-2.952-5.976h-2.688v5.976zm4.32-9.50397h2.928c1.728 0 2.64-.624 2.64-2.064s-.912-2.064-2.64-2.064h-2.928z" />
                   <path d="m8.99145 18.384c-5.448 0-8.208003-3.792-8.208003-8.90401 0-5.256 2.904003-9.023996 8.328003-9.023996 4.67995 0 7.17595 2.783996 7.58395 6.767996h-4.416c-.312-1.872-1.08-3.24-3.35995-3.24-2.856 0-3.72 2.208-3.72 5.424 0 3.24001.864 5.44801 3.72 5.44801 2.30395 0 3.07195-1.368 3.35995-3.288h4.416c-.384 3.936-2.976 6.816-7.70395 6.816z" />
                 </g>
+              </svg> */}
+
+              <svg
+                width="100%"
+                height="auto"
+                viewBox="0 0 200 40"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <text
+                  x="0"
+                  y="35"
+                  fill="#444"
+                  fontWeight="900"
+                  fontSize="40"
+                  fontFamily="'PP Neue Montreal', sans-serif"
+                >
+                  GENERAL
+                </text>
               </svg>
+
+              <svg
+                width="100%"
+                height="60"
+                viewBox="0 0 100 20"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMaxYMid meet"
+              >
+                <text
+                  x="100%"
+                  y="15"
+                  textAnchor="end"
+                  fill="#444"
+                  fontSize="10"
+                  fontWeight="600"
+                  fontFamily="'PP Neue Montreal', sans-serif"
+                  letterSpacing="1"
+                >
+                  Techniques and trade kouta
+                </text>
+              </svg>
+
               <div className="svg-texture-overlay"></div>
             </div>
           </div>
@@ -71,7 +108,7 @@ const Hero = () => {
               <div className="texture-overlay"></div>
             </div>
           </div>
-          <div className="col-3"></div>
+          <div className="col-3 "></div>
           <div className="col-4 hero-right">
             <p className="about-text">
               I am a visual artist exploring the intersection of mental
