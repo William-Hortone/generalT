@@ -1,6 +1,8 @@
 import { gsap } from "gsap";
 import React, { useEffect } from "react";
 
+import image from "../assets/img.png";
+import images from "../constants/images";
 const Hero = () => {
   useEffect(() => {
     gsap.to(".hero-image", {
@@ -101,25 +103,13 @@ const Hero = () => {
         <div className="row row-content">
           <div className="col-5 hero-left">
             <div className="hero-image">
-              <img
-                src="https://cdn.cosmos.so/2200c8e1-2901-4fdb-806c-a2596b3e9c49?format=jpeg"
-                alt="Portrait"
-              />
+              <img src={images.pic1} alt="Portrait" />
               <div className="texture-overlay"></div>
             </div>
           </div>
           <div className="col-3 "></div>
           <div className="col-4 hero-right">
-            <p className="about-text">
-              I am a visual artist exploring the intersection of mental
-              landscapes and creative expression. Creating art as a therapeutic
-              journey, my work embodies the transformation of internal chaos
-              into external beauty. Through deliberate practice and intuitive
-              creation, I find that art provides structure in times of
-              uncertainty and offers a rare clarity when thoughts become
-              overwhelming. Each piece becomes both mirror and window—reflecting
-              inner states while allowing glimpses into possible futures.
-            </p>
+            <p className="about-text">TRANSFORMING INTERNATIONAL TRADE</p>
           </div>
         </div>
       </div>

@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import images from "./../constants/images";
+
+// images
 const Header = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, CustomEase);
@@ -77,9 +80,15 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <div className="logo">GTTK</div>
-        <div className="get-in-touch">
-          <a href="#contact">+GET IN TOUCH</a>
+        <div className=" w-[140px] md:w-[200px] h-[80px] md:h-[100px]">
+          <img
+            className="object-cover w-full h-full "
+            src={images.logo}
+            alt="logo"
+          />
+        </div>
+        <div className="get-in-touch ">
+          <a href="#contact" className="bg-primary">+GET IN TOUCH</a>
           <div className="yellow-line-container">
             <div className="scroll-indicator"></div>
           </div>
@@ -88,7 +97,7 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
-           <a href="#about">Customer</a>
+          <a href="#about">Customer</a>
           {/* <a href="#portfolio">portfolio</a> */}
         </div>
       </div>

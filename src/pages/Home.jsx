@@ -6,9 +6,9 @@ import { CustomEase } from 'gsap/CustomEase';
 import Lenis from '@studio-freight/lenis';
 // import './App.css';
 import {Header, Gallery, Hero, Footer} from '../components';
+import MeetTeam from '../containers/MeetTeam';
 
 
- 
 
 function Home() {
   useEffect(() => {
@@ -246,6 +246,7 @@ requestAnimationFrame(raf);
       <Header />
       <Hero />
       <Gallery />
+      <MeetTeam />
       <Footer />
     </div>
   );
