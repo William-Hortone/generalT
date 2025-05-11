@@ -57,7 +57,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="gallery">
+    <section id="gallery" className="my-16 overflow-hidden gallery">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -68,8 +68,8 @@ const Gallery = () => {
                 </div>
               ))}
             </div>
-            <div className="gallery-caption">
-              <p>
+            <div className="my-[10rem] mx-auto  gallery-caption">
+              <p className="">
                 General techniques and trade Kouta is a dynamic enterprise
                 dedicated to revolutionizing the trading experience by
                 seamlessly connecting China and Africa. We specialize in

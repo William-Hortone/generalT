@@ -69,6 +69,7 @@ const HorizontalScroll = () => {
           src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
           alt=""
         /> */}
+        
         {team.map((member, index) => (
           <CardImg key={index} member={member} />
         ))}

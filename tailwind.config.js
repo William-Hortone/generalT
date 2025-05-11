@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         fontBase: ['primaryFont', 'sans-serif'],
-        fontAlt: ['secondaryFont', 'sans-serif'],
+        fontAlt: ['PP Neue Montreal', 'sans-serif'],
         cormorant: ['"Cormorant Upright"', 'serif'],
         opensans: ['"Open Sans"', 'sans-serif'],
       },

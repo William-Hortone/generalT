@@ -79,16 +79,18 @@ const Header = () => {
   }, []);
   return (
     <header>
-      <div className="header-container">
+      <div className="bg-red-600 header-container ">
         <div className=" w-[140px] md:w-[200px] h-[80px] md:h-[100px]">
           <img
-            className="object-cover w-full h-full "
+            className="object-cover w-full h-full"
             src={images.logo}
             alt="logo"
           />
         </div>
         <div className="get-in-touch ">
-          <a href="#contact" className="bg-primary">+GET IN TOUCH</a>
+          <a href="#contact" className="bg-primary">
+            +GET IN TOUCH
+          </a>
           <div className="yellow-line-container">
             <div className="scroll-indicator"></div>
           </div>
@@ -97,7 +99,7 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
-          <a href="#about">Customer</a>
+          <Link to="/customer">Customer</Link>
           {/* <a href="#portfolio">portfolio</a> */}
         </div>
       </div>

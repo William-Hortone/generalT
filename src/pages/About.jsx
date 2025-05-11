@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Header, ServiceContent } from "../components";
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <>
+      {/* <section></section> */}
+      <Header />
+      <div className="w-full h-auto ">
+        <ServiceContent />
+      </div>
+    </>
+  );
+};
 
-export default About
+export default About;

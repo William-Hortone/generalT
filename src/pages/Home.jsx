@@ -1,14 +1,11 @@
-
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { CustomEase } from 'gsap/CustomEase';
-import Lenis from '@studio-freight/lenis';
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CustomEase } from "gsap/CustomEase";
+import Lenis from "@studio-freight/lenis";
 // import './App.css';
-import {Header, Gallery, Hero, Footer} from '../components';
-import MeetTeam from '../containers/MeetTeam';
-
-
+import { Header, Gallery, Hero, Footer, Title } from "../components";
+import MeetTeam from "../containers/MeetTeam";
 
 function Home() {
   useEffect(() => {
@@ -20,40 +17,34 @@ function Home() {
 
     const scrollIndicator = document.querySelector(".scroll-indicator");
 
-const updateScrollProgress = () => {
-  const scrollHeight = document.documentElement.scrollHeight;
-  const windowHeight = window.innerHeight;
-  const scrollY = lenis.scroll; // use Lenis scroll value
+    const updateScrollProgress = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const scrollY = lenis.scroll; // use Lenis scroll value
 
-  const progress = (scrollY / (scrollHeight - windowHeight)) * 100;
-  if (scrollIndicator) {
-    scrollIndicator.style.width = `${progress}%`;
-  }
-};
+      const progress = (scrollY / (scrollHeight - windowHeight)) * 100;
+      if (scrollIndicator) {
+        scrollIndicator.style.width = `${progress}%`;
+      }
+    };
 
+    // Inside your useEffect hook
+    const lenis = new Lenis({
+      lerp: 0.1, // Lower values make scroll more immediate (default: 0.1)
+      smoothWheel: true, // Enable smooth wheel scrolling
+      infinite: false, // Disable infinite scrolling
+    });
 
+    // Optimized RAF handling
+    const raf = (time) => {
+      // lenis.raf(time);
+      // requestAnimationFrame(raf);
 
-
- 
-// Inside your useEffect hook
-const lenis = new Lenis({
-  lerp: 0.1, // Lower values make scroll more immediate (default: 0.1)
-  smoothWheel: true, // Enable smooth wheel scrolling
-  infinite: false, // Disable infinite scrolling
-});
-
-// Optimized RAF handling
-const raf = (time) => {
-  // lenis.raf(time);
-  // requestAnimationFrame(raf);
-
-
-  lenis.raf(time);
-  updateScrollProgress(); // sync progress bar with scroll
-  requestAnimationFrame(raf);
-};
-requestAnimationFrame(raf);
-  
+      lenis.raf(time);
+      updateScrollProgress(); // sync progress bar with scroll
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
 
     gsap.ticker.lagSmoothing(0);
 
@@ -68,13 +59,13 @@ requestAnimationFrame(raf);
         trigger: ".hero",
         start: "top bottom",
         end: "center center",
-        scrub: true
+        scrub: true,
       },
       scale: 1,
       opacity: 1,
       filter: "blur(0px)",
       duration: 1.5,
-      ease: "blurEase"
+      ease: "blurEase",
     });
 
     gsap.to(".about-text", {
@@ -82,36 +73,38 @@ requestAnimationFrame(raf);
         trigger: ".hero",
         start: "top bottom",
         end: "center center",
-        scrub: true
+        scrub: true,
       },
       y: 0,
       opacity: 1,
       filter: "blur(0px)",
       duration: 1,
-      ease: "verticalEase"
+      ease: "verticalEase",
     });
 
     // Gallery animations
     const galleryItems = document.querySelectorAll(".gallery-item img");
 
     galleryItems.forEach((item, index) => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: item.parentElement,
-          start: "top bottom-=100",
-          end: "bottom top+=100",
-          toggleActions: "play none none reverse"
-        }
-      }).fromTo(
-        item,
-        { clipPath: "inset(100% 0 0 0)" },
-        {
-          clipPath: "inset(0% 0 0 0)",
-          duration: 1.2,
-          delay: index * 0.1,
-          ease: "verticalEase"
-        }
-      );
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: item.parentElement,
+            start: "top bottom-=100",
+            end: "bottom top+=100",
+            toggleActions: "play none none reverse",
+          },
+        })
+        .fromTo(
+          item,
+          { clipPath: "inset(100% 0 0 0)" },
+          {
+            clipPath: "inset(0% 0 0 0)",
+            duration: 1.2,
+            delay: index * 0.1,
+            ease: "verticalEase",
+          }
+        );
     });
 
     // Gallery caption animation
@@ -121,13 +114,13 @@ requestAnimationFrame(raf);
         start: "top bottom",
         end: "center center",
         toggleActions: "play none none reverse",
-        scrub: true
+        scrub: true,
       },
       y: 0,
       opacity: 1,
       filter: "blur(0px)",
       duration: 1,
-      ease: "blurEase"
+      ease: "blurEase",
     });
 
     // Footer SVG animation
@@ -138,7 +131,7 @@ requestAnimationFrame(raf);
       gsap.set(path, {
         opacity: 0,
         y: startY,
-        filter: "blur(8px)"
+        filter: "blur(8px)",
       });
     });
 
@@ -155,7 +148,7 @@ requestAnimationFrame(raf);
           filter: "blur(0px)",
           duration: 1.4,
           ease: "svgEase",
-          delay: staggerDelay
+          delay: staggerDelay,
         },
         0
       );
@@ -191,7 +184,7 @@ requestAnimationFrame(raf);
           footerTl.reverse();
           footerAnimated = false;
         }
-      }
+      },
     });
 
     // Footer CTA animation
@@ -200,13 +193,13 @@ requestAnimationFrame(raf);
         trigger: ".footer",
         start: "top bottom-=200",
         end: "center center",
-        toggleActions: "play none none reverse"
+        toggleActions: "play none none reverse",
       },
       y: 0,
       opacity: 1,
       filter: "blur(0px)",
       duration: 1.2,
-      ease: "verticalEase"
+      ease: "verticalEase",
     });
 
     // Menu hover effects
@@ -217,7 +210,7 @@ requestAnimationFrame(raf);
         gsap.to(link, {
           filter: "blur(0px)",
           duration: 0.3,
-          ease: "verticalEase"
+          ease: "verticalEase",
         });
       });
 
@@ -225,7 +218,7 @@ requestAnimationFrame(raf);
         gsap.to(link, {
           filter: "blur(1px)",
           duration: 0.3,
-          ease: "verticalEase"
+          ease: "verticalEase",
         });
       });
     });
@@ -233,8 +226,8 @@ requestAnimationFrame(raf);
     // Cleanup function
     return () => {
       lenis.destroy();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      navLinks.forEach(link => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      navLinks.forEach((link) => {
         link.removeEventListener("mouseenter", () => {});
         link.removeEventListener("mouseleave", () => {});
       });
@@ -245,19 +238,15 @@ requestAnimationFrame(raf);
     <div className="wrapper">
       <Header />
       <Hero />
+
+      <div className="text-center mt-52 dbg-slate-600">
+        <Title />
+      </div>
       <Gallery />
       <MeetTeam />
       <Footer />
     </div>
   );
 }
-
-
-
-
-
-
-
-
 
 export default Home;

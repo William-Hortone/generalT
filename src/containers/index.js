@@ -1,3 +1,4 @@
+import HorizontalGallery from "./HorizontalGallery";
 import MeetTeam from "./MeetTeam";
 
-export { MeetTeam };
+export { MeetTeam, HorizontalGallery };
