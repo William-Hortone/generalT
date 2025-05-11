@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CustomEase } from "gsap/CustomEase";
 import Lenis from "@studio-freight/lenis";
+import { gsap } from "gsap";
+import { CustomEase } from "gsap/CustomEase";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
 // import './App.css';
-import { Header, Gallery, Hero, Footer, Title } from "../components";
+import { Gallery, Header, Hero, Title } from "../components";
+import FooterService from "../components/FooterService";
 import MeetTeam from "../containers/MeetTeam";
 
 function Home() {
@@ -241,10 +242,13 @@ function Home() {
 
       <div className="text-center mt-52 dbg-slate-600">
         <Title />
+        {/* <FluidTextAnimation /> */}
+
       </div>
       <Gallery />
       <MeetTeam />
-      <Footer />
+      
+      <FooterService />
     </div>
   );
 }

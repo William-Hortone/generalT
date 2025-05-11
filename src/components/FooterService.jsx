@@ -81,8 +81,8 @@ const FooterService = () => {
       <div className={styles.footerContent}>
         <div ref={footerHeaderRef} className={styles.footerHeader}>
           <h2>
-            <span className={styles.lightText}>Find the essence in simplicity,</span>
-            <span className={styles.boldText}>Create without boundaries.</span>
+            <span className={styles.lightText}>Tianjin General kouta,</span>
+            <span className={styles.boldText}>international Trade Co. Ltd.</span>
           </h2>
         </div>
 
@@ -90,7 +90,7 @@ const FooterService = () => {
           <div className={styles.footerColumn}>
             <div ref={el => footerSectionsRef.current[0] = el} className={styles.footerSection}>
               <h3>Contact</h3>
-              <p><a href="mailto:hi@filip.fyi">hi@filip.fyi</a></p>
+              <p><a href="mailto:generalkouta21@gmail.com">generalkouta21@gmail.com</a></p>
               <p><a href="tel:+381631943959">+381.63.TARA.959</a></p>
             </div>
 
@@ -115,14 +115,14 @@ const FooterService = () => {
 
           <div className={styles.footerColumn}>
             <div ref={el => footerSectionsRef.current[4] = el} className={styles.footerSection}>
-              <p><a href="#">Works<sup>(10)</sup></a></p>
-              <p><a href="#">About</a></p>
-              <p><a href="#">Journal</a></p>
+              <p><a href="/">Home</a></p>
+              <p><a href="#">Services<sup>(10)</sup></a></p>
+              <p><a href="#">Gallery</a></p>
             </div>
 
             <div ref={el => footerSectionsRef.current[5] = el} className={styles.footerSection}>
               <h3>Location</h3>
-              <p>43.9359° N, 19.4959° E</p>
+              <p>China, Beijing</p>
             </div>
           </div>
         </div>

@@ -79,7 +79,7 @@ const Header = () => {
   }, []);
   return (
     <header>
-      <div className="bg-red-600 header-container ">
+      <div className="bg-reds-600 header-container ">
         <div className=" w-[140px] md:w-[200px] h-[80px] md:h-[100px]">
           <img
             className="object-cover w-full h-full"
@@ -97,9 +97,9 @@ const Header = () => {
         </div>
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
           <Link to="/customer">Customer</Link>
+          <Link to="/about">Gallery</Link>
           {/* <a href="#portfolio">portfolio</a> */}
         </div>
       </div>

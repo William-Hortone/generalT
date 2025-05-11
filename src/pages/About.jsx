@@ -1,5 +1,4 @@
-import React from "react";
-import { Header, ServiceContent } from "../components";
+import { Header, HorizontalScrollGallery } from "../components";
 
 const About = () => {
   return (
@@ -7,7 +6,7 @@ const About = () => {
       {/* <section></section> */}
       <Header />
       <div className="w-full h-auto ">
-        <ServiceContent />
+        <HorizontalScrollGallery />
       </div>
     </>
   );

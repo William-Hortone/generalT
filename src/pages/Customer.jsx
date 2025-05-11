@@ -1,9 +1,10 @@
-import React from "react";
-import ServiceHeader from "./../components/ServicesHeader";
+import {
+  Header
+} from "../components";
+import Product from "../containers/Product";
 import FooterService from "./../components/FooterService";
 import ProjectContent from "./../components/ProjectsContent";
-import { Header, ServiceContent } from "../components";
-import './global.css'
+import "./global.css";
 
 const Customer = () => {
   return (
@@ -12,7 +13,8 @@ const Customer = () => {
         {/* <ServiceHeader /> */}
         <Header />
         <ProjectContent />
-        <ServiceContent />
+        {/* <AnimatedSections /> */}
+        <Product />
         <FooterService />
       </section>
     </>

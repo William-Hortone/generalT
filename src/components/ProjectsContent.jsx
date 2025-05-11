@@ -10,28 +10,28 @@ const projects = [
   {
     id: 1,
     title: "Seamless Trade Connectivity",
-    year: "2021",
+    year: "GTTK",
     image:
       "https://cdn.cosmos.so/7d47d4e2-0eff-4e2f-9734-9d24a8ba067e?format=jpeg",
   },
   {
     id: 2,
     title: "Sustainable Energy and Infrastructure",
-    year: "2022",
+    year: "GTTK",
     image:
       "https://cdn.cosmos.so/5eee2d2d-3d4d-4ae5-96d4-cdbae70a2387?format=jpeg",
   },
   {
     id: 3,
     title: "AI-Driven Solution",
-    year: "2022",
+    year: "GTTK",
     image:
       "https://cdn.cosmos.so/def30e8a-34b2-48b1-86e1-07ec5c28f225?format=jpeg",
   },
   {
     id: 4,
     title: "Seamless Transactions and Customer Support",
-    year: "2023",
+    year: "GTTK",
     image:
       "https://cdn.cosmos.so/44d7cb23-6759-49e4-9dc1-acf771b3a0d1?format=jpeg",
   },
@@ -79,23 +79,23 @@ const ProjectContent = () => {
     ScrollTrigger.refresh();
   }, []);
 
-  const toggleView = (newView) => {
-    if (view === newView || !projectsContainerRef.current) return;
+  // const toggleView = (newView) => {
+  //   if (view === newView || !projectsContainerRef.current) return;
 
-    const projectItems =
-      projectsContainerRef.current.querySelectorAll(".project-item");
-    if (projectItems.length === 0) return;
+  //   const projectItems =
+  //     projectsContainerRef.current.querySelectorAll(".project-item");
+  //   if (projectItems.length === 0) return;
 
-    const state = Flip.getState(projectItems);
-    setView(newView);
+  //   const state = Flip.getState(projectItems);
+  //   setView(newView);
 
-    Flip.from(state, {
-      duration: 1,
-      ease: "power2.out",
-      absolute: true,
-      onComplete: () => ScrollTrigger.refresh(),
-    });
-  };
+  //   Flip.from(state, {
+  //     duration: 1,
+  //     ease: "power2.out",
+  //     absolute: true,
+  //     onComplete: () => ScrollTrigger.refresh(),
+  //   });
+  // };
 
   const handleMouseEnter = (project, e) => {
     if (!imagePreviewRef.current) return;
