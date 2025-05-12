@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
 import styles from "./Projects.module.css";
+import images from "../constants/images";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -11,29 +12,25 @@ const projects = [
     id: 1,
     title: "Seamless Trade Connectivity",
     year: "GTTK",
-    image:
-      "https://cdn.cosmos.so/7d47d4e2-0eff-4e2f-9734-9d24a8ba067e?format=jpeg",
+    image: images.pic10,
   },
   {
     id: 2,
     title: "Sustainable Energy and Infrastructure",
     year: "GTTK",
-    image:
-      "https://cdn.cosmos.so/5eee2d2d-3d4d-4ae5-96d4-cdbae70a2387?format=jpeg",
+    image: images.pic11,
   },
   {
     id: 3,
     title: "AI-Driven Solution",
     year: "GTTK",
-    image:
-      "https://cdn.cosmos.so/def30e8a-34b2-48b1-86e1-07ec5c28f225?format=jpeg",
+    image: images.pic12,
   },
   {
     id: 4,
     title: "Seamless Transactions and Customer Support",
     year: "GTTK",
-    image:
-      "https://cdn.cosmos.so/44d7cb23-6759-49e4-9dc1-acf771b3a0d1?format=jpeg",
+    image: images.pic15,
   },
 ];
 
@@ -164,8 +161,6 @@ const ProjectContent = () => {
               />
             </g>
           </svg>
-
-    
         </div>
 
         <div className={styles.header}>

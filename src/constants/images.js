@@ -7,6 +7,11 @@ import pic5 from "../assets/Picture5.png";
 import pic6 from "../assets/Picture6.png";
 import pic7 from "../assets/Picture7.png";
 import pic9 from "../assets/Picture9.png";
+import pic10 from "../assets/Picture10.png";
+import pic11 from "../assets/Picture11.png";
+import pic12 from "../assets/Picture12.png";
+import pic14 from "../assets/Picture14.png";
+import pic15 from "../assets/Picture15.png";
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
 import team3 from "../assets/team3.png";
@@ -17,29 +22,47 @@ import team7 from "../assets/team7.png";
 import team8 from "../assets/team8.png";
 import team9 from "../assets/team9.png";
 import team10 from "../assets/team10.png";
-import product1 from '../assets/product1.png'
-import product2 from '../assets/product2.png'
-import product3 from '../assets/product3.png'
-import product4 from '../assets/product4.png'
-import product5 from '../assets/product5.png'
-import product6 from '../assets/product6.png'
-import product7 from '../assets/product7.png'
-import product8 from '../assets/product8.png'
-import product9 from '../assets/product9.png'
-import product10 from '../assets/product10.png'
-import product11 from '../assets/product11.png'
-import product12 from '../assets/product12.png'
-import product13 from '../assets/product13.png'
-import product14 from '../assets/product14.png'
-import product15 from '../assets/product15.png'
-import product16 from '../assets/product16.png'
-import product17 from '../assets/product17.png'
-import product18 from '../assets/product18.png'
-import product19 from '../assets/product19.png'
-import product20 from '../assets/product20.png'
-import product21 from '../assets/product21.png'
-import product22 from '../assets/product22.png'
-import product23 from '../assets/product23.png'
+import product1 from "../assets/product1.png";
+import product2 from "../assets/product2.png";
+import product3 from "../assets/product3.png";
+import product4 from "../assets/product4.png";
+import product5 from "../assets/product5.png";
+import product6 from "../assets/product6.png";
+import product7 from "../assets/product7.png";
+import product8 from "../assets/product8.png";
+import product9 from "../assets/product9.png";
+import product10 from "../assets/product10.png";
+import product11 from "../assets/product11.png";
+import product12 from "../assets/product12.png";
+import product13 from "../assets/product13.png";
+import product14 from "../assets/product14.png";
+import product15 from "../assets/product15.png";
+import product16 from "../assets/product16.png";
+import product17 from "../assets/product17.png";
+import product18 from "../assets/product18.png";
+import product19 from "../assets/product19.png";
+import product20 from "../assets/product20.png";
+import product21 from "../assets/product21.png";
+import product22 from "../assets/product22.png";
+import product23 from "../assets/product23.png";
+
+import article1 from "../assets/article1.jpg";
+// import article2 from "../assets/article2.jpg";
+import article3 from "../assets/article3.jpg";
+import article4 from "../assets/article4.jpg";
+import article6 from "../assets/article6.jpg";
+import article7 from "../assets/article7.jpg";
+import article10 from "../assets/article10.jpg";
+// import article11 from "../assets/article11.jpg";
+import article12 from "../assets/article12.jpg";
+import article13 from "../assets/article13.jpg";
+import article14 from "../assets/article14.jpg";
+import article15 from "../assets/article15.jpg";
+import article16 from "../assets/article16.jpg";
+import article17 from "../assets/article17.jpg";
+import article18 from "../assets/article18.jpg";
+import article19 from "../assets/article19.jpg";
+
 
 const images = {
   logo,
@@ -51,6 +74,11 @@ const images = {
   pic7,
   pic9,
   pic6,
+  pic10,
+  pic11,
+  pic12,
+  pic14,
+  pic15,
   team1,
   team2,
   team3,
@@ -85,7 +113,20 @@ const images = {
   product22,
   product23,
 
-
+  article1,
+  article3,
+  article4,
+  article6,
+  article7,
+  article10,
+  article14,
+  article15,
+  article16,
+  article17,
+  article18,
+  article12,
+  article13,
+  article19,
 };
 
 export default images;

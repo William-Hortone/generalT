@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./HorizontalScrollGallery.css";
+import { galleryImages } from "../constants/data";
+import images from "../constants/images";
 
 const HorizontalScrollGallery = () => {
   const containerRef = useRef(null);
@@ -29,7 +31,8 @@ const HorizontalScrollGallery = () => {
         scale: 1,
         x: 0,
         y: 0,
-        filter: "grayscale(1)",
+        // filter: "grayscale(1)",
+        filter: "none",
         duration: 1,
         stagger: 0.05,
         ease: "power2.out",
@@ -101,26 +104,27 @@ const HorizontalScrollGallery = () => {
       >
         <div className="scrollsection" data-scroll-section>
           {[
-            { size: "normal", orientation: "vertical", speed: 2, id: 1005 },
-            { size: "big", orientation: "vertical", speed: 1, id: 1019 },
-            { size: "small", orientation: "horizontal", speed: 4, id: 1027 },
-            { size: "normal", orientation: "vertical", speed: 3, id: 1028 },
-            { size: "normal", orientation: "horizontal", speed: 2, id: 1041 },
-            { size: "big", orientation: "horizontal", speed: 4, id: 1042 },
-            { size: "small", orientation: "vertical", speed: 2, id: 1049 },
-            { size: "normal", orientation: "horizontal", speed: 1, id: 1056 },
-            { size: "small", orientation: "horizontal", speed: 3, id: 1062 },
-            { size: "big", orientation: "vertical", speed: 1, id: 1068 },
-            { size: "normal", orientation: "horizontal", speed: 2, id: 1069 },
-            { size: "normal", orientation: "horizontal", speed: 1, id: 1072 },
-            { size: "small", orientation: "horizontal", speed: 4, id: 1075 },
-            { size: "big", orientation: "vertical", speed: 3, id: 1081 },
-            { size: "normal", orientation: "horizontal", speed: 2, id: 111 },
-            { size: "small", orientation: "horizontal", speed: 4, id: 129 },
-            { size: "big", orientation: "vertical", speed: 2, id: 137 },
-            { size: "normal", orientation: "horizontal", speed: 1, id: 141 },
-            { size: "small", orientation: "horizontal", speed: 3, id: 145 },
-            { size: "normal", orientation: "vertical", speed: 1, id: 147 },
+            { size: "normal", orientation: "vertical", speed: 2, id: 1005,img: images.article1  },
+            { size: "big", orientation: "vertical", speed: 1, id: 1019, img: images.article3, },
+            { size: "small", orientation: "horizontal", speed: 4, id: 1027, img: images.article4 },
+            { size: "normal", orientation: "vertical", speed: 3, id: 1028, img: images.article7, },
+            { size: "normal", orientation: "horizontal", speed: 2, id: 1041, img: images.article10, },
+            { size: "big", orientation: "horizontal", speed: 4, id: 1042, img: images.article12, },
+            { size: "small", orientation: "vertical", speed: 2, id: 1049, img: images.article14, },
+            { size: "normal", orientation: "horizontal", speed: 1, id: 1056, img: images.article15, },
+            { size: "small", orientation: "horizontal", speed: 3, id: 1062,     img: images.article16, },
+            { size: "big", orientation: "vertical", speed: 1, id: 1068, img: images.article17, },
+            { size: "normal", orientation: "horizontal", speed: 2, id: 1069,  img: images.article18, },
+            { size: "normal", orientation: "horizontal", speed: 2, id: 1089,  img: images.article19, },
+            { size: "normal", orientation: "horizontal", speed: 1, id: 1072, img: images.product13, },
+            { size: "small", orientation: "horizontal", speed: 4, id: 1075, img: images.product8, },
+            { size: "big", orientation: "vertical", speed: 3, id: 1081, img: images.product7, },
+            { size: "normal", orientation: "horizontal", speed: 2, id: 111, img: images.product14, },
+            { size: "small", orientation: "horizontal", speed: 4, id: 129, img: images.product11, },
+            { size: "big", orientation: "vertical", speed: 2, id: 137 , img: images.product23,},
+            { size: "normal", orientation: "horizontal", speed: 1, id: 141,  img: images.product3,},
+            { size: "normal", orientation: "vertical", speed: 1, id: 147, img: images.product7, },
+            { size: "small", orientation: "horizontal", speed: 3, id: 145,  img: images.product3, },
           ].map((item, index) => (
             <div
               key={index}
@@ -132,12 +136,18 @@ const HorizontalScrollGallery = () => {
             >
               <img
                 className="image"
+                src={item.img}
+                alt={`Gallery item ${index}`}
+                loading="lazy"
+              />
+              {/* <img
+                className="image"
                 src={`https://picsum.photos/id/${item.id}/${
                   item.orientation === "horizontal" ? "400/300" : "300/400"
                 }`}
                 alt={`Gallery item ${index}`}
                 loading="lazy"
-              />
+              /> */}
             </div>
           ))}
         </div>

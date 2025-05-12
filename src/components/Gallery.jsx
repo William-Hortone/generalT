@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import images from "../constants/images";
+import TextEffect from "./TextEffect";
 
 const Gallery = () => {
   useEffect(() => {
@@ -50,10 +51,6 @@ const Gallery = () => {
     images.pic4,
     images.pic5,
     images.pic6,
-    // "https://cdn.cosmos.so/91da03b4-8f72-40bd-9531-ce101ecb9508?format=jpeg",
-    // "https://cdn.cosmos.so/9dbf17e4-d4fa-4095-98dd-d6527d4bb53a?format=jpeg",
-    // "https://cdn.cosmos.so/bed49b37-4a4a-4cec-ac80-86f5d2edbb8d?format=jpeg",
-    // "https://cdn.cosmos.so/031178f7-7078-4866-9de3-c80062188a2b?format=jpeg",
   ];
 
   return (
@@ -69,14 +66,11 @@ const Gallery = () => {
               ))}
             </div>
             <div className="my-[10rem] mx-auto  gallery-caption">
-              <p className="">
-                General techniques and trade Kouta is a dynamic enterprise
-                dedicated to revolutionizing the trading experience by
-                seamlessly connecting China and Africa. We specialize in
-                providing superior products and AI-driven solutions tailored to
-                meet diverse needs, empowering individuals and businesses to
-                thrive in the global marketplace
-              </p>
+              <TextEffect
+                textContent="General techniques and trade Kouta is a dynamic enterprise dedicated to revolutionizing the trading experience by
+                seamlessly connecting China and Africa. We specialize in providing superior products and AI-driven solutions tailored to meet diverse needs, empowering individuals and businesses to
+                thrive in the global marketplace"
+              />
             </div>
           </div>
         </div>

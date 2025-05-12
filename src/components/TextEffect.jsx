@@ -21,10 +21,10 @@ const TextEffect = ({textContent}) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 75%", // Adjusted trigger point
+        start: "top 75%", 
         end: "bottom 25%",
         toggleActions: "play none none none",
-        markers: true // Remove in production
+        markers: true 
       }
     });
 
@@ -44,8 +44,8 @@ const TextEffect = ({textContent}) => {
   }, []);
 
   return (
-    <div ref={containerRef} className="max-w-2xl p-8 mx-auto">
-      <div className="mb-12 text-2xl leading-relaxed">
+    <div ref={containerRef} className="max-w-3xl p-8 mx-auto">
+      <div className="mb-12 text-3xl leading-relaxed">
         {textContent.split("").map((char, i) => (
           <span 
             key={`char-${i}`} 

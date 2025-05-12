@@ -64,7 +64,7 @@ const HorizontalScroll = () => {
   return (
     <section id="sectionPin" ref={containerRef}>
       <div className="pin-wrap" ref={pinRef}>
-        <h2>Meet the team</h2>
+        <h2 className="text-white uppercase">Meet the team</h2>
         {/* <img
           src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
           alt=""

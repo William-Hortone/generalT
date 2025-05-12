@@ -90,8 +90,11 @@ const FooterService = () => {
           <div className={styles.footerColumn}>
             <div ref={el => footerSectionsRef.current[0] = el} className={styles.footerSection}>
               <h3>Contact</h3>
-              <p><a href="mailto:generalkouta21@gmail.com">generalkouta21@gmail.com</a></p>
-              <p><a href="tel:+381631943959">+381.63.TARA.959</a></p>
+            
+              <p><a href="tel:+1 (289) 244-8690">+1 (289) 244-8690</a></p>
+              <p><a href="tel:+1 (289) 244-8690">+86 13311876241</a></p>
+              <p><a href="tel:+1 (289) 244-8690">+236 75508705</a></p>
+              <p><a href="tel:+1 (289) 244-8690">+236 72302835</a></p>
             </div>
 
             <div ref={el => footerSectionsRef.current[1] = el} className={styles.footerSection}>
@@ -102,14 +105,15 @@ const FooterService = () => {
 
           <div className={styles.footerColumn}>
             <div ref={el => footerSectionsRef.current[2] = el} className={styles.footerSection}>
-              <p><a href="#">Sound</a></p>
-              <p><a href="#">Vision</a></p>
-              <p><a href="#">Feeling</a></p>
+               <p><a href="mailto:generalkouta21@gmail.com">generalkouta21@gmail.com</a></p>
+               <p><a href="mailto:Poumskito8@gmail.com">Poumskito8@gmail.com</a></p>
+              {/* <p><a href="#">Vision</a></p> */}
+              {/* <p><a href="#">Feeling</a></p> */}
             </div>
 
             <div ref={el => footerSectionsRef.current[3] = el} className={styles.footerSection}>
-              <h3>Fragments</h3>
-              <p>Receive Signals</p>
+              <h3>Looking forward</h3>
+              <p>To your cooperation</p>
             </div>
           </div>
 

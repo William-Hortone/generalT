@@ -1,13 +1,67 @@
 import { gsap } from "gsap";
-import React, { useEffect } from "react";
-
-import image from "../assets/img.png";
+import React, { useEffect, useRef } from "react";
 import images from "../constants/images";
+
 const Hero = () => {
+  const heroRef = useRef(null);
+  const svgTextRef = useRef(null);
+  const subTextRef = useRef(null);
+  const imageRef = useRef(null);
+  const aboutTextRef = useRef(null);
+
   useEffect(() => {
-    gsap.to(".hero-image", {
+    // Initial setup - hide elements before animation
+    gsap.set(
+      [
+        svgTextRef.current,
+        subTextRef.current,
+        imageRef.current,
+        aboutTextRef.current,
+      ],
+      {
+        opacity: 0,
+        y: 20,
+      }
+    );
+
+    // Mount animations
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    // Animate main SVG text
+    tl.fromTo(
+      svgTextRef.current,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 1 }
+    );
+
+    // Animate subtitle
+    tl.fromTo(
+      subTextRef.current,
+      { opacity: 0, x: 40 },
+      { opacity: 1, x: 0, duration: 0.8 },
+      "-=0.5"
+    );
+
+    // Animate hero image
+    tl.fromTo(
+      imageRef.current,
+      { opacity: 0, scale: 0.8, filter: "blur(5px)" },
+      { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.2 },
+      "-=0.3"
+    );
+
+    // Animate about text
+    tl.fromTo(
+      aboutTextRef.current,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8 },
+      "-=0.5"
+    );
+
+    // Scroll animations (your existing code)
+    gsap.to(imageRef.current, {
       scrollTrigger: {
-        trigger: ".hero",
+        trigger: heroRef.current,
         start: "top bottom",
         end: "center center",
         scrub: true,
@@ -19,9 +73,9 @@ const Hero = () => {
       ease: "blurEase",
     });
 
-    gsap.to(".about-text", {
+    gsap.to(aboutTextRef.current, {
       scrollTrigger: {
-        trigger: ".hero",
+        trigger: heroRef.current,
         start: "top bottom",
         end: "center center",
         scrub: true,
@@ -33,31 +87,15 @@ const Hero = () => {
       ease: "verticalEase",
     });
   }, []);
+
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className="hero" ref={heroRef}>
       <div className="container">
         <div className="row row-svg">
           <div className="col-12">
             <div className="svg-container">
-              {/* <svg
-                width="100%"
-                height="auto"
-                viewBox="0 0 113 19"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g fill="var(--offblack)">
-                  <path d="m98.9088 18v-17.159973h13.0082v3.528003h-8.688v3.048h7.488v3.52797h-7.488v3.528h8.832v3.528z" />
-                  <path d="m87.9181 18-5.712-17.159973h4.728l3.24 12.023973h.048l3.264-12.023973h4.56l-5.568 17.159973z" />
-                  <path d="m77.0988 18v-17.159973h4.32v17.159973z" />
-                  <path d="m66.7308 18v-13.63197h-4.992v-3.528003h14.28v3.528003h-4.968v13.63197z" />
-                  <path d="m46.8616 18 6.528-17.159973h4.344l6.576 17.159973h-4.728l-1.104-3.576h-5.88l-1.104 3.576zm6.72-6.864h3.936l-1.944-6.33597h-.048z" />
-                  <path d="m33.7431 18v-17.159973h13.008v3.528003h-8.688v3.048h7.488v3.52797h-7.488v3.528h8.832v3.528z" />
-                  <path d="m17.9397 18v-17.159973h8.088c3.816 0 6.12 1.776003 6.12 4.896003 0 2.4-1.344 3.816-3.48 4.29597v.048c4.296.744 2.736 7.392 3.72 7.68v.24h-4.488c-.84-.72.72-5.976-2.952-5.976h-2.688v5.976zm4.32-9.50397h2.928c1.728 0 2.64-.624 2.64-2.064s-.912-2.064-2.64-2.064h-2.928z" />
-                  <path d="m8.99145 18.384c-5.448 0-8.208003-3.792-8.208003-8.90401 0-5.256 2.904003-9.023996 8.328003-9.023996 4.67995 0 7.17595 2.783996 7.58395 6.767996h-4.416c-.312-1.872-1.08-3.24-3.35995-3.24-2.856 0-3.72 2.208-3.72 5.424 0 3.24001.864 5.44801 3.72 5.44801 2.30395 0 3.07195-1.368 3.35995-3.288h4.416c-.384 3.936-2.976 6.816-7.70395 6.816z" />
-                </g>
-              </svg> */}
-
               <svg
+                ref={svgTextRef}
                 width="100%"
                 height="auto"
                 viewBox="0 0 200 40"
@@ -76,6 +114,7 @@ const Hero = () => {
               </svg>
 
               <svg
+                ref={subTextRef}
                 width="100%"
                 height="60"
                 viewBox="0 0 100 20"
@@ -102,18 +141,21 @@ const Hero = () => {
         </div>
         <div className="row row-content">
           <div className="col-5 hero-left">
-            <div className="hero-image">
+            <div className="hero-image" ref={imageRef}>
               <img src={images.pic1} alt="Portrait" />
               <div className="texture-overlay"></div>
             </div>
           </div>
-          <div className="col-3 "></div>
+          <div className="col-3"></div>
           <div className="col-4 hero-right">
-            <p className="about-text">TRANSFORMING INTERNATIONAL TRADE</p>
+            <p className="about-text" ref={aboutTextRef}>
+              TRANSFORMING INTERNATIONAL TRADE
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 export default Hero;

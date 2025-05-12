@@ -48,5 +48,64 @@ const team = [
   },
 ];
 
+export const galleryImages = [
+  {
+    img: images.article1,
+  },
+  {
+    img: images.article3,
+  },
+  {
+    img: images.article4,
+  },
+  {
+    img: images.article7,
+  },
+  {
+    img: images.article10,
+  },
+  {
+    img: images.article12,
+  },
+  {
+    img: images.article13,
+  },
+  {
+    img: images.article14,
+  },
+  {
+    img: images.article15,
+  },
+  {
+    img: images.article16,
+  },
+  {
+    img: images.article17,
+  },
+  {
+    img: images.article19,
+  },
+  {
+    img: images.product13,
+  },
+  {
+    img: images.product8,
+  },
+  {
+    img: images.product7,
+  },
+  {
+    img: images.product14,
+  },
+  {
+    img: images.product11,
+  },
+  {
+    img: images.product23,
+  },
+  {
+    img: images.product3,
+  },
+];
 
-export default team
+export default team;
