@@ -3,12 +3,13 @@ import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
 
 import images from "./../constants/images";
 
-// images
 const Header = () => {
+  const navigate = useNavigate(); // ✅ init navigator
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, CustomEase);
 
@@ -31,7 +32,6 @@ const Header = () => {
       }
     };
 
-    // Optimized RAF handling
     const raf = (time) => {
       lenis.raf(time);
       updateScrollProgress();
@@ -41,13 +41,11 @@ const Header = () => {
 
     gsap.ticker.lagSmoothing(0);
 
-    // Custom eases
     CustomEase.create("verticalEase", "0.4, 0, 0.2, 1");
-    CustomEase.create("blurEase", "0.65, 0, 0.35, 1");
-    CustomEase.create("svgEase", "0.25, 0.1, 0.25, 1");
 
-    // Menu hover effects
-    const navLinks = document.querySelectorAll(".nav-links a");
+    const navLinks = document.querySelectorAll(
+      ".nav-links a, .nav-links button"
+    );
 
     navLinks.forEach((link) => {
       link.addEventListener("mouseenter", () => {
@@ -67,7 +65,6 @@ const Header = () => {
       });
     });
 
-    // Cleanup function
     return () => {
       lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -77,17 +74,32 @@ const Header = () => {
       });
     };
   }, []);
+
+  // ✅ Transition handler
+  const handlePageChange = (path) => {
+    // Example animation before leaving
+    gsap.to(".image", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+      ease: "power2.inOut",
+      onComplete: () => {
+        navigate(path);
+      },
+    });
+  };
+
   return (
     <header>
-      <div className="bg-reds-600 header-container ">
-        <div className=" w-[140px] md:w-[200px] h-[80px] md:h-[100px]">
+      <div className="bg-reds-600 header-container">
+        <div className="w-[140px] md:w-[200px] h-[80px] md:h-[100px]">
           <img
             className="object-cover w-full h-full"
             src={images.logo}
             alt="logo"
           />
         </div>
-        <div className="get-in-touch ">
+        <div className="get-in-touch">
           <a href="#contact" className="bg-primary">
             +GET IN TOUCH
           </a>
@@ -96,11 +108,30 @@ const Header = () => {
           </div>
         </div>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/customer">Customer</Link>
-          <Link to="/about">Gallery</Link>
-          {/* <a href="#portfolio">portfolio</a> */}
+          <button
+            className="nav-links-btn"
+            onClick={() => handlePageChange("/")}
+          >
+            Home
+          </button>
+          <button
+            className="nav-links-btn"
+            onClick={() => handlePageChange("/services")}
+          >
+            Services
+          </button>
+          <button
+            className="nav-links-btn"
+            onClick={() => handlePageChange("/customer")}
+          >
+            Customer
+          </button>
+          <button
+            className="nav-links-btn"
+            onClick={() => handlePageChange("/about")}
+          >
+            Gallery
+          </button>
         </div>
       </div>
     </header>

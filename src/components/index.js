@@ -7,10 +7,13 @@ import CardImg from "./CardImg";
 import HorizontalScrollGallery from "./HorizontalScrollGallery";
 import Title from "./title/Title";
 import { ServiceContent } from "./ServiceContent";
-import AnimatedSections from './animation/AnimatedSection';
-import LayoutGridView  from "./LayoutGridView";
+import AnimatedSections from "./animation/AnimatedSection";
+import LayoutGridView from "./LayoutGridView";
 import TextEffect from "./TextEffect";
 import FluidTextAnimation from "./title/FluidTextAnimation";
+import PageTransition from "./animation/PageTransition";
+import ParagraphText from "./title/ParagraphText";
+import Description from "./Description";
 
 export {
   Footer,
@@ -25,5 +28,8 @@ export {
   AnimatedSections,
   LayoutGridView,
   TextEffect,
-  FluidTextAnimation
+  FluidTextAnimation,
+  PageTransition,
+  ParagraphText,
+  Description,
 };

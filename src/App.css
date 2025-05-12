@@ -251,7 +251,7 @@ header {
   margin-left: 3rem;
 }
 
-.nav-links a {
+.nav-links-btn {
   font-size: 1.6rem;
   text-decoration: none;
   color: var(--offblack);

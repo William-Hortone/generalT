@@ -1473,6 +1473,11 @@
   "resolved" "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.8.tgz"
   "version" "0.2.8"
 
+"@gsap/react@^2.1.2":
+  "integrity" "sha512-JqliybO1837UcgH2hVOM4VO+38APk3ECNrsuSM4MuXp+rbf+/2IG2K1YJiqfTcXQHH7XlA0m3ykniFYstfq0Iw=="
+  "resolved" "https://registry.npmjs.org/@gsap/react/-/react-2.1.2.tgz"
+  "version" "2.1.2"
+
 "@gulpjs/messages@^1.1.0":
   "integrity" "sha512-Ys9sazDatyTgZVb4xPlDufLweJ/Os2uHWOv+Caxvy2O85JcnT4M3vc73bi8pdLWlv3fdWQz3pdI9tVwo8rQQSg=="
   "resolved" "https://registry.npmjs.org/@gulpjs/messages/-/messages-1.1.0.tgz"

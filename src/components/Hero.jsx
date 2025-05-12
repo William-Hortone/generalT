@@ -123,7 +123,7 @@ const Hero = () => {
               >
                 <text
                   x="100%"
-                  y="15"
+                  y="10"
                   textAnchor="end"
                   fill="#444"
                   fontSize="10"

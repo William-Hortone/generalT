@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import images from "../constants/images";
 import TextEffect from "./TextEffect";
+import ParagraphText from "./title/ParagraphText";
+import Description from "./Description";
 
 const Gallery = () => {
   useEffect(() => {
@@ -66,6 +68,13 @@ const Gallery = () => {
               ))}
             </div>
             <div className="my-[10rem] mx-auto  gallery-caption">
+              {/* <ParagraphText
+                text="General techniques and trade Kouta is a dynamic enterprise dedicated to revolutionizing the trading experience by
+                seamlessly connecting China and Africa. We specialize in providing superior products and AI-driven solutions tailored to meet diverse needs, empowering individuals and businesses to
+                thrive in the global marketplace"
+              /> */}
+        
+
               <TextEffect
                 textContent="General techniques and trade Kouta is a dynamic enterprise dedicated to revolutionizing the trading experience by
                 seamlessly connecting China and Africa. We specialize in providing superior products and AI-driven solutions tailored to meet diverse needs, empowering individuals and businesses to

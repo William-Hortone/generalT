@@ -4,7 +4,7 @@ import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 // import './App.css';
-import { Gallery, Header, Hero, Title } from "../components";
+import { Description, Gallery, Header, Hero, Title } from "../components";
 import FooterService from "../components/FooterService";
 import MeetTeam from "../containers/MeetTeam";
 
@@ -31,18 +31,15 @@ function Home() {
 
     // Inside your useEffect hook
     const lenis = new Lenis({
-      lerp: 0.1, // Lower values make scroll more immediate (default: 0.1)
-      smoothWheel: true, // Enable smooth wheel scrolling
-      infinite: false, // Disable infinite scrolling
+      lerp: 0.1,
+      smoothWheel: true,
+      infinite: false,
     });
 
     // Optimized RAF handling
     const raf = (time) => {
-      // lenis.raf(time);
-      // requestAnimationFrame(raf);
-
       lenis.raf(time);
-      updateScrollProgress(); // sync progress bar with scroll
+      updateScrollProgress();
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
@@ -240,14 +237,13 @@ function Home() {
       <Header />
       <Hero />
 
-      <div className="text-center mt-52 dbg-slate-600">
+      <div className="text-center my-[22rem] bdg-slate-600">
         <Title />
         {/* <FluidTextAnimation /> */}
-
       </div>
+      {/* <Description /> */}
       <Gallery />
       <MeetTeam />
-      
       <FooterService />
     </div>
   );
