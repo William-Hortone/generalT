@@ -3,8 +3,7 @@ import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-// import './App.css';
-import { Description, Gallery, Header, Hero, Title } from "../components";
+import { Gallery, Header, Hero, Title } from "../components";
 import FooterService from "../components/FooterService";
 import MeetTeam from "../containers/MeetTeam";
 
@@ -12,9 +11,6 @@ function Home() {
   useEffect(() => {
     // Initialize GSAP plugins
     gsap.registerPlugin(ScrollTrigger, CustomEase);
-
-    // Initialize Lenis for smooth scrolling
-    // const lenis = new Lenis();
 
     const scrollIndicator = document.querySelector(".scroll-indicator");
 

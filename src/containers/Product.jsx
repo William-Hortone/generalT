@@ -1,5 +1,4 @@
-import React from "react";
-import { FluidTextAnimation, LayoutGridView, TextEffect } from "../components";
+import { LayoutGridView, TextEffect } from "../components";
 import images from "../constants/images";
 
 const Product = () => {
@@ -8,8 +7,6 @@ const Product = () => {
       <section className="flex flex-col w-full h-auto">
         <div className="flex w-full ">
           <div className="flex flex-col justify-center w-1/2 h-auto">
-
- 
             <TextEffect
               textContent="We build bridges between China and Africa, offering a 
 diverse range of products tailored to meet various needs."

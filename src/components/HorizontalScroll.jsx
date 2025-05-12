@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import "./horizontalScroll.css";
-import CardImg from "./CardImg";
-import images from "../constants/images";
+import { useEffect, useRef } from "react";
 import team from "../constants/data";
+import CardImg from "./CardImg";
+import "./horizontalScroll.css";
 
 gsap.registerPlugin(ScrollTrigger);
 

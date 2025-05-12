@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { useEffect } from "react";
 import images from "../constants/images";
 import TextEffect from "./TextEffect";
-import ParagraphText from "./title/ParagraphText";
-import Description from "./Description";
 
 const Gallery = () => {
   useEffect(() => {

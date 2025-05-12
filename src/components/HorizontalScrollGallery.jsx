@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import "./HorizontalScrollGallery.css";
-import { galleryImages } from "../constants/data";
+import { useEffect, useRef } from "react";
 import images from "../constants/images";
+import "./HorizontalScrollGallery.css";
 
 const HorizontalScrollGallery = () => {
   const containerRef = useRef(null);

@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from 'react';
 import styles from './Footer.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -120,8 +120,8 @@ const FooterService = () => {
           <div className={styles.footerColumn}>
             <div ref={el => footerSectionsRef.current[4] = el} className={styles.footerSection}>
               <p><a href="/">Home</a></p>
-              <p><a href="#">Services<sup>(10)</sup></a></p>
-              <p><a href="#">Gallery</a></p>
+              <p><a href="/">Services<sup>(10)</sup></a></p>
+              <p><a href="/">Gallery</a></p>
             </div>
 
             <div ref={el => footerSectionsRef.current[5] = el} className={styles.footerSection}>
