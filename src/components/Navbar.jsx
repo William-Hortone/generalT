@@ -1,13 +1,11 @@
-import clsx from "clsx";
 import gsap from "gsap";
-import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
-import images from "./../constants/images";
-import { Link } from "react-router-dom";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { CgMenuMotion } from "react-icons/cg";
-import "./navbar.css";
 import { MdClose } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { useWindowScroll } from "react-use";
+import images from "./../constants/images";
+import "./navbar.css";
 
 const navItems = [
   { title: "Home", link: "/" },
@@ -18,8 +16,7 @@ const navItems = [
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [isIndicatorActive, setIsIndicatorActive] = useState(false);
-  const audioElementRef = useRef(null);
+  // const [isIndicatorActive, setIsIndicatorActive] = useState(false);
   const navContainerRef = useRef(null);
 
   const { y: currentScrollY } = useWindowScroll();
@@ -66,7 +63,6 @@ const NavBar = () => {
             </div>
 
             {/* Navigation Links  */}
-            {/* <div className="flex items-center h-full"> */}
             <div className="hidden md:block">
               {navItems.map((item, index) => (
                 <Link key={index} to={item.link} className="nav-hover-btn">
@@ -74,7 +70,6 @@ const NavBar = () => {
                 </Link>
               ))}
             </div>
-            {/* </div> */}
 
             <div className="block md:hidden">
               <CgMenuMotion
@@ -100,7 +95,7 @@ const NavBar = () => {
           className="absolute cursor-pointer top-16 right-16"
           onClick={() => setShowMenu(false)}
         >
-          <MdClose color="white" size={30}  />
+          <MdClose color="white" size={30} />
         </span>
         <ul className="flex flex-col items-center justify-center gap-8 text-blue-100 size-full navbar-links font-zentry">
           <li>
