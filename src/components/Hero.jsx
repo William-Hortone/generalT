@@ -1,160 +1,165 @@
-import { gsap } from "gsap";
-import React, { useEffect, useRef } from "react";
-import images from "../constants/images";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useEffect, useRef, useState } from "react";
+
+import VideoPreview from "./VideoPreview";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  const heroRef = useRef(null);
-  const svgTextRef = useRef(null);
-  const subTextRef = useRef(null);
-  const imageRef = useRef(null);
-  const aboutTextRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [hasClicked, setHasClicked] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [loadedVideos, setLoadedVideos] = useState(0);
+
+  const totalVideos = 3;
+  const nextVdRef = useRef(null);
+
+  const handleVideoLoad = () => {
+    setLoadedVideos((prev) => prev + 1);
+  };
 
   useEffect(() => {
-    // Initial setup - hide elements before animation
-    gsap.set(
-      [
-        svgTextRef.current,
-        subTextRef.current,
-        imageRef.current,
-        aboutTextRef.current,
-      ],
-      {
-        opacity: 0,
-        y: 20,
+    if (loadedVideos === totalVideos - 1) {
+      setLoading(false);
+    }
+  }, [loadedVideos]);
+
+  const handleMiniVdClick = () => {
+    setHasClicked(true);
+
+    setCurrentIndex((prevIndex) => (prevIndex % totalVideos) + 1);
+  };
+
+  useGSAP(
+    () => {
+      if (hasClicked) {
+        gsap.set("#next-video", { visibility: "visible" });
+        gsap.to("#next-video", {
+          transformOrigin: "center center",
+          scale: 1,
+          width: "100%",
+          height: "100%",
+          duration: 1,
+          ease: "power1.inOut",
+          onStart: () => nextVdRef.current.play(),
+        });
+        gsap.from("#current-video", {
+          transformOrigin: "center center",
+          scale: 0,
+          duration: 1.5,
+          ease: "power1.inOut",
+        });
       }
-    );
+    },
+    {
+      dependencies: [currentIndex],
+      revertOnUpdate: true,
+    }
+  );
 
-    // Mount animations
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    // Animate main SVG text
-    tl.fromTo(
-      svgTextRef.current,
-      { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 1 }
-    );
-
-    // Animate subtitle
-    tl.fromTo(
-      subTextRef.current,
-      { opacity: 0, x: 40 },
-      { opacity: 1, x: 0, duration: 0.8 },
-      "-=0.5"
-    );
-
-    // Animate hero image
-    tl.fromTo(
-      imageRef.current,
-      { opacity: 0, scale: 0.8, filter: "blur(5px)" },
-      { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1.2 },
-      "-=0.3"
-    );
-
-    // Animate about text
-    tl.fromTo(
-      aboutTextRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8 },
-      "-=0.5"
-    );
-
-    // Scroll animations (your existing code)
-    gsap.to(imageRef.current, {
+  useGSAP(() => {
+    gsap.set("#video-frame", {
+      clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+      borderRadius: "0% 0% 40% 10%",
+    });
+    gsap.from("#video-frame", {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      borderRadius: "0% 0% 0% 0%",
+      ease: "power1.inOut",
       scrollTrigger: {
-        trigger: heroRef.current,
-        start: "top bottom",
-        end: "center center",
+        trigger: "#video-frame",
+        start: "center center",
+        end: "bottom center",
         scrub: true,
       },
-      scale: 1,
-      opacity: 1,
-      filter: "blur(0px)",
-      duration: 1.5,
-      ease: "blurEase",
     });
+  });
 
-    gsap.to(aboutTextRef.current, {
-      scrollTrigger: {
-        trigger: heroRef.current,
-        start: "top bottom",
-        end: "center center",
-        scrub: true,
-      },
-      y: 0,
-      opacity: 1,
-      filter: "blur(0px)",
-      duration: 1,
-      ease: "verticalEase",
-    });
-  }, []);
+  const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
 
   return (
-    <section id="hero" className="hero" ref={heroRef}>
-      <div className="container">
-        <div className="row row-svg">
-          <div className="col-12">
-            <div className="svg-container">
-              <svg
-                ref={svgTextRef}
-                width="100%"
-                height="auto"
-                viewBox="0 0 200 40"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <text
-                  x="0"
-                  y="35"
-                  fill="#444"
-                  fontWeight="900"
-                  fontSize="40"
-                  fontFamily="'PP Neue Montreal', sans-serif"
-                >
-                  GENERAL
-                </text>
-              </svg>
-
-              <svg
-                ref={subTextRef}
-                width="100%"
-                height="60"
-                viewBox="0 0 100 20"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMaxYMid meet"
-              >
-                <text
-                  x="100%"
-                  y="10"
-                  textAnchor="end"
-                  fill="#444"
-                  fontSize="10"
-                  fontWeight="600"
-                  fontFamily="'PP Neue Montreal', sans-serif"
-                  letterSpacing="1"
-                >
-                  Techniques and trade kouta
-                </text>
-              </svg>
-
-              <div className="svg-texture-overlay"></div>
-            </div>
+    <div className="relative w-screen overflow-x-hidden h-dvh">
+      {loading && (
+        <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
+          {/* https://uiverse.io/G4b413l/tidy-walrus-92 */}
+          <div className="three-body">
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
           </div>
         </div>
-        <div className="row row-content">
-          <div className="col-5 hero-left">
-            <div className="hero-image" ref={imageRef}>
-              <img src={images.pic1} alt="Portrait" />
-              <div className="texture-overlay"></div>
-            </div>
+      )}
+
+      <div
+        id="video-frame"
+        className="relative z-10 w-screen overflow-hidden rounded-lg h-dvh bg-blue-75"
+      >
+        <div>
+          <div className="absolute z-50 overflow-hidden rounded-lg cursor-pointer mask-clip-path absolute-center size-64">
+            <VideoPreview>
+              <div
+                onClick={handleMiniVdClick}
+                className="transition-all duration-500 ease-in origin-center scale-50 opacity-0 hover:scale-100 hover:opacity-100"
+              >
+                <video
+                  ref={nextVdRef}
+                  src={getVideoSrc((currentIndex % totalVideos) + 1)}
+                  loop
+                  muted
+                  id="current-video"
+                  className="object-cover object-center origin-center scale-150 size-64"
+                  onLoadedData={handleVideoLoad}
+                />
+              </div>
+            </VideoPreview>
           </div>
-          <div className="col-3"></div>
-          <div className="col-4 hero-right">
-            <p className="about-text" ref={aboutTextRef}>
-              TRANSFORMING INTERNATIONAL TRADE
+
+          <video
+            ref={nextVdRef}
+            src={getVideoSrc(currentIndex)}
+            loop
+            muted
+            id="next-video"
+            className="absolute z-20 invisible object-cover object-center absolute-center size-64"
+            onLoadedData={handleVideoLoad}
+          />
+          <video
+            src={getVideoSrc(
+              currentIndex === totalVideos - 1 ? 1 : currentIndex
+            )}
+            autoPlay
+            loop
+            muted
+            className="absolute top-0 left-0 object-cover object-center size-full"
+            onLoadedData={handleVideoLoad}
+          />
+        </div>
+
+        <h1 className="absolute z-40 text-blue-75 special-font hero-heading bottom-5 right-5">
+          G<b>A</b>MING
+        </h1>
+
+        <div className="absolute top-0 left-0 z-40 size-full">
+          <div className="px-5 mt-24 sm:px-10">
+            <h1 className="text-blue-100 special-font hero-heading">
+              redefi<b>n</b>e
+            </h1>
+
+            <p className="mb-5 text-blue-100 max-w-64 font-robert-regular">
+              Enter the Metagame Layer <br /> Unleash the Play Economy
             </p>
+
+ 
           </div>
         </div>
       </div>
-    </section>
+
+      <h1 className="absolute text-black special-font hero-heading bottom-5 right-5">
+        G<b>A</b>MING
+      </h1>
+    </div>
   );
 };
 

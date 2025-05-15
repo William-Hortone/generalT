@@ -50,7 +50,7 @@ const AnimatedSections = () => {
         end: "bottom center",
         onEnter: () => setActiveIndex(index),
         onEnterBack: () => setActiveIndex(index),
-        markers: true, // Visible markers to help debug
+        markers: false, 
       });
     });
 

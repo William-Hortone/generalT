@@ -37,6 +37,7 @@
     "react-slick": "^0.29.0",
     "react-star-ratings": "^2.3.0",
     "react-toastify": "^10.0.5",
+    "react-use": "^17.6.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11",
     "tailwind-merge": "^3.2.0",

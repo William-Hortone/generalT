@@ -1,15 +1,9 @@
-import { Header, HorizontalScrollGallery } from "../components";
+import React from 'react'
 
 const About = () => {
   return (
-    <>
-      {/* <section></section> */}
-      <Header />
-      <div className="w-full h-auto ">
-        <HorizontalScrollGallery />
-      </div>
-    </>
-  );
-};
+    <div>About</div>
+  )
+}
 
-export default About;
+export default About

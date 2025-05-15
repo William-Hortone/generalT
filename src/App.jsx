@@ -1,9 +1,9 @@
-import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import './App.css';
-import { About, Customer, Home, Services } from './pages';
-import {PageTransition} from './components';
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import "./App.css";
+import { About, Customer, Home, Services } from "./pages";
+// import {PageTransition} from './components';
 
 function App() {
   const location = useLocation();
@@ -12,26 +12,10 @@ function App() {
     <>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={
-            <PageTransition>
-              <Home />
-            </PageTransition>
-          } />
-          <Route path="/about" element={
-            <PageTransition>
-              <About />
-            </PageTransition>
-          } />
-          <Route path="/services" element={
-            <PageTransition>
-              <Services />
-            </PageTransition>
-          } />
-          <Route path="/customer" element={
-            <PageTransition>
-              <Customer />
-            </PageTransition>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/customer" element={<Customer />} />
         </Routes>
       </AnimatePresence>
     </>
