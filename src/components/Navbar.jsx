@@ -2,11 +2,22 @@ import clsx from "clsx";
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
+import images from "./../constants/images";
+import { Link } from "react-router-dom";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { CgMenuMotion } from "react-icons/cg";
+import "./navbar.css";
+import { MdClose } from "react-icons/md";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+const navItems = [
+  { title: "Home", link: "/" },
+  { title: "Services", link: "/services" },
+  { title: "Customer", link: "/customer" },
+  { title: "Gallery", link: "/gallery" },
+];
 
 const NavBar = () => {
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
   const audioElementRef = useRef(null);
   const navContainerRef = useRef(null);
@@ -14,21 +25,6 @@ const NavBar = () => {
   const { y: currentScrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-
-  // Toggle audio and visual indicator
-  const toggleAudioIndicator = () => {
-    setIsAudioPlaying((prev) => !prev);
-    setIsIndicatorActive((prev) => !prev);
-  };
-
-  // Manage audio playback
-  useEffect(() => {
-    if (isAudioPlaying) {
-      audioElementRef.current.play();
-    } else {
-      audioElementRef.current.pause();
-    }
-  }, [isAudioPlaying]);
 
   useEffect(() => {
     if (currentScrollY === 0) {
@@ -57,58 +53,91 @@ const NavBar = () => {
   }, [isNavVisible]);
 
   return (
-    <div
-      ref={navContainerRef}
-      className="fixed inset-x-0 z-50 h-16 transition-all duration-700 border-none top-4 sm:inset-x-6"
-    >
-      <header className="absolute w-full -translate-y-1/2 top-1/2">
-        <nav className="flex items-center justify-between p-4 size-full">
-          {/* Logo and Product button */}
-          <div className="flex items-center gap-7">
-            <img src="/img/logo.png" alt="logo" className="w-10" />
-
-          </div>
-
-          {/* Navigation Links and Audio Button */}
-          <div className="flex items-center h-full">
-            <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </a>
-              ))}
+    <>
+      <div
+        ref={navContainerRef}
+        className="fixed inset-x-0 z-50 h-16 transition-all duration-700 border-none top-4 sm:inset-x-6"
+      >
+        <header className="absolute w-full -translate-y-1/2 top-1/2">
+          <nav className="flex items-center justify-between p-4 size-full">
+            {/* Logo and Product button */}
+            <div className="flex items-center gap-7">
+              <img src={images.logo} alt="logo" className="w-28 " />
             </div>
 
-            <button
-              onClick={toggleAudioIndicator}
-              className="ml-10 flex items-center space-x-0.5"
-            >
-              <audio
-                ref={audioElementRef}
-                className="hidden"
-                src="/audio/loop.mp3"
-                loop
-              />
-              {[1, 2, 3, 4].map((bar) => (
-                <div
-                  key={bar}
-                  className={clsx("indicator-line", {
-                    active: isIndicatorActive,
-                  })}
-                  style={{
-                    animationDelay: `${bar * 0.1}s`,
-                  }}
-                />
+            {/* Navigation Links  */}
+            {/* <div className="flex items-center h-full"> */}
+            <div className="hidden md:block">
+              {navItems.map((item, index) => (
+                <Link key={index} to={item.link} className="nav-hover-btn">
+                  {item.title}
+                </Link>
               ))}
-            </button>
-          </div>
-        </nav>
-      </header>
-    </div>
+            </div>
+            {/* </div> */}
+
+            <div className="block md:hidden">
+              <CgMenuMotion
+                className="cursor-pointer"
+                color="white"
+                size={30}
+                onClick={() => setShowMenu(true)}
+              />
+            </div>
+          </nav>
+        </header>
+      </div>
+
+      {/* Menu overlay */}
+      <div
+        className={
+          showMenu
+            ? "  bg-black absolute top-0 left-0 size-full z-50 transition-all duration-300 ease-in-out"
+            : "left-[-100%] absolute"
+        }
+      >
+        <span
+          className="absolute cursor-pointer top-16 right-16"
+          onClick={() => setShowMenu(false)}
+        >
+          <MdClose color="white" size={30}  />
+        </span>
+        <ul className="flex flex-col items-center justify-center gap-8 text-blue-100 size-full navbar-links font-zentry">
+          <li>
+            <Link to="/" className="link" onClick={() => setShowMenu(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
+              className="link"
+              onClick={() => setShowMenu(false)}
+            >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/customer"
+              className="link"
+              onClick={() => setShowMenu(false)}
+            >
+              Customer
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/gallery"
+              className="link"
+              onClick={() => setShowMenu(false)}
+            >
+              Gallery
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };
 

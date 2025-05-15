@@ -80,7 +80,7 @@ const Hero = () => {
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
 
   return (
-    <div className="relative w-screen overflow-x-hidden h-dvh">
+    <div className="relative w-screen overflow-hidden h-dvh">
       {loading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           {/* https://uiverse.io/G4b413l/tidy-walrus-92 */}
@@ -138,26 +138,24 @@ const Hero = () => {
         </div>
 
         <h1 className="absolute z-40 text-blue-75 special-font hero-heading bottom-5 right-5">
-          G<b>A</b>MING
+          ko<b>u</b>ta
         </h1>
 
         <div className="absolute top-0 left-0 z-40 size-full">
           <div className="px-5 mt-24 sm:px-10">
             <h1 className="text-blue-100 special-font hero-heading">
-              redefi<b>n</b>e
+              Gener<b>a</b>l
             </h1>
 
-            <p className="mb-5 text-blue-100 max-w-64 font-robert-regular">
-              Enter the Metagame Layer <br /> Unleash the Play Economy
-            </p>
-
- 
+            <h2 className="mb-5 text-blue-100 max-w-64 special-font hero-heading-second">
+             Techniques and trade
+            </h2>
           </div>
         </div>
       </div>
 
       <h1 className="absolute text-black special-font hero-heading bottom-5 right-5">
-        G<b>A</b>MING
+        ko<b>u</b>ta
       </h1>
     </div>
   );
