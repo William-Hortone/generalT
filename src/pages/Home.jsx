@@ -1,11 +1,14 @@
 import React from "react";
-import {Hero, Navbar} from "../components";
+import {Hero, HorizontalScroll, Navbar} from "../components";
+import {CompanyOverview} from "../containers";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <CompanyOverview />
+      <HorizontalScroll />
       <div className="h-[100vh]"></div>
     </>
   );

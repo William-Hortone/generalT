@@ -1,6 +1,6 @@
 import images from "./images";
 
-const team = [
+export const teamData = [
   {
     position: "HOMEOWNER",
     img: images.team1,
@@ -46,6 +46,51 @@ const team = [
     x: "+86 13951350895",
     location: "Gabon",
   },
+  {
+    position: "MANAGER",
+    img: images.team6,
+    name: "Yarafa née Zakaria Mathurine Valérie",
+    phone: "Tel : 0023675508705 / +23674126967",
+    email: "",
+    x: "",
+    location: "",
+  },
+  // {
+  //   position: "COMMUNICATION OFFICER",
+  //   img: images.team7,
+  //   name: "DENNIS ROXZANE BERNADETTE",
+  //   phone: "Tel : 0023675508705 / +23674126967",
+  //   email: "Roxzanedennis@outlook.com",
+  //   x: "",
+  //   location: "South Africa",
+  // },
+  // {
+  //   position: "COMMERCIAL DIRECTORAGER",
+  //   name: "MIGOLET OBEYE GEFFRY STEEDE",
+  //   img: images.team8,
+  //   phone: "Tel : 0023675508705 / +23674126967",
+  //   email: "steedeobeye@gmail.com",
+  //   x: "+86 13951350895",
+  //   location: "Gabon",
+  // },
+  // {
+  //   position: "COMMUNICATION OFFICER",
+  //   img: images.team9,
+  //   name: "DENNIS ROXZANE BERNADETTE",
+  //   phone: "Tel : 0023675508705 / +23674126967",
+  //   email: "Roxzanedennis@outlook.com",
+  //   x: "",
+  //   location: "South Africa",
+  // },
+  // {
+  //   position: "COMMERCIAL DIRECTORAGER",
+  //   name: "MIGOLET OBEYE GEFFRY STEEDE",
+  //   img: images.team10,
+  //   phone: "Tel : 0023675508705 / +23674126967",
+  //   email: "steedeobeye@gmail.com",
+  //   x: "+86 13951350895",
+  //   location: "Gabon",
+  // },
 ];
 
 export const galleryImages = [
@@ -107,5 +152,3 @@ export const galleryImages = [
     img: images.product3,
   },
 ];
-
-export default team;
