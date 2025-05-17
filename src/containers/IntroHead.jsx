@@ -48,11 +48,11 @@ const IntroHead = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col-reverse md:flex-row w-full pt-20 bg-white h-[100vh]"
+      className="flex flex-col-reverse md:flex-row w-full pt-20 bg-white h-[calc(100vh+5rem)]"
     >
       <div
         ref={leftRef}
-        className="flex flex-col justify-between border-r-2 border-r-lightBlack-100 w-full md:w-[35vw] h-screen p-8 md:pr-0 bg-red-200"
+        className="flex flex-col justify-between border-r-2 border-b-2 border-b-lightBlack-100 border-r-lightBlack-100 w-full overflow-auto md:w-[35vw] h-screen p-8 md:pr-0 "
       >
         <div className="w-full md:pr-8 h-[30vh]">
           <img
@@ -80,7 +80,7 @@ const IntroHead = () => {
 
       <div
         ref={rightRef}
-        className="flex flex-col items-center justify-between w-full md:w-[65vw] h-screen gap-4 p-8 bg-green-200"
+        className="flex flex-col items-center justify-between w-full md:w-[65vw] h-screen gap-4 p-8 "
       >
         <h1 className="z-40 special-font hero-heading bottom-5 right-5">
           serv<b>i</b>ces

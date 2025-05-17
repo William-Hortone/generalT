@@ -4,5 +4,15 @@ import Navbar from "./Navbar";
 import CardImgTeam from "./CardImgTeam";
 import HorizontalScroll from "./HorizontalScroll";
 import Footer from "./Footer";
-
-export { Hero, Navbar, CardImg, CardImgTeam, HorizontalScroll, Footer };
+import ServiceDisc from "./ServiceDisc";
+import TextAnimation from "./title/TextAnimation";
+export {
+  Hero,
+  Navbar,
+  CardImg,
+  CardImgTeam,
+  HorizontalScroll,
+  Footer,
+  ServiceDisc,
+  TextAnimation,
+};

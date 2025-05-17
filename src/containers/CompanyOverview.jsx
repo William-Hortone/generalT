@@ -5,7 +5,7 @@ import images from "../constants/images";
 const CompanyOverview = () => {
   return (
     <>
-      <section className="flex w-full h-full my-20 border-y-2 bg-yelldow-200 border-y-lightBlack-100 ">
+      <section className="flex w-full h-full my-20 border-y-2 border-y-lightBlack-100 ">
         <div className="flex flex-col w-1/2 h-full gap-4 p-8 divider">
           <CardImg img={images.pic1} />
           <CardImg img={images.pic2} />
@@ -14,7 +14,7 @@ const CompanyOverview = () => {
           <CardImg img={images.pic5} />
         </div>
 
-        <div className="w-full h-full min-h-[60vh] md:min-h-[150vh] flex flex-col bg-white justify-between bdg-red-500 top-8">
+        <div className="w-full h-full min-h-[60vh] md:min-h-[150vh] flex flex-col bg-white justify-between  top-8">
           <div className="sticky w-full  md:h-[20vh]  top-8 bg-dneutral-400  p-8">
             <h2 className="mb-4 text-3xl font-semibold uppercase md:text-xl font-zentry ">
               Company Profile

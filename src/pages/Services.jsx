@@ -1,12 +1,13 @@
-import { Hero, Navbar } from "../components";
+import { Hero, Navbar, ServiceDisc } from "../components";
 import { IntroHead } from "../containers";
 
 const Services = () => {
   return (
-    <section className="bg-yellow-200 container-customer">
+    <section className="bg-white container-customer">
       <Navbar />
       {/* <Hero /> */}
       <IntroHead />
+      <ServiceDisc />
       <div className="h-[100vh] w-full"></div>
     </section>
   );
