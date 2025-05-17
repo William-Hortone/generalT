@@ -20,37 +20,3 @@
   padding: 0 1vw;
 }
 
-/* img {
-    height: 80vh;
-    width: auto;
-    object-fit: cover;
-  } */
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .scroll-animations-example > .scrollsection {
-    padding: 5vh 5vh 5vh 5vmax;
-  }
-
-  .item.-big.-horizontal {
-    height: 45vh !important;
-    width: 60vh !important;
-  }
-}
-
-/* Loading animation */
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.6;
-  }
-}
-
-.image:not(.-active) {
-  animation: pulse 2s infinite ease-in-out;
-}

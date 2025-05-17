@@ -1,6 +1,6 @@
 import React from "react";
-import {Hero, HorizontalScroll, Navbar} from "../components";
-import {CompanyOverview} from "../containers";
+import { Footer, Hero, HorizontalScroll, Navbar } from "../components";
+import { CompanyOverview } from "../containers";
 
 const Home = () => {
   return (
@@ -9,7 +9,8 @@ const Home = () => {
       <Hero />
       <CompanyOverview />
       <HorizontalScroll />
-      <div className="h-[100vh]"></div>
+      <Footer />
+      {/* <div className="h-[100vh]"></div> */}
     </>
   );
 };

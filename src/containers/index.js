@@ -1,3 +1,4 @@
 import CompanyOverview from "./CompanyOverview";
+import IntroHead from "./IntroHead";
 
-export { CompanyOverview };
+export { CompanyOverview, IntroHead };

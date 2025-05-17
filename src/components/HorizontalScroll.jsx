@@ -41,9 +41,7 @@ const HorizontalScroll = () => {
       ref={containerRef}
     >
       <div className="z-50 flex justify-center w-full p-4 bg-purple-600">
-        <h2 className="text-3xl font-bold font-zentry text-blue-50">
-          Meet Our team
-        </h2>
+     
       </div>
 
       <div className="bg-green-200 pin-wrap" ref={pinRef}>
@@ -53,9 +51,9 @@ const HorizontalScroll = () => {
       </div>
 
       <div className="z-50 flex justify-center w-full p-4 bg-purple-600">
-        {/* <h2 className="z-40 text-blue-75 special-font hero-heading bottom-5 right-5">
-          me<b>e</b>t our team
-        </h2> */}
+        <h2 className="z-40 text-blue-75 special-font hero-heading bottom-5 right-5">
+          me<b>e</b>t our t<b>e</b>am
+        </h2>
       </div>
     </section>
   );

@@ -1,7 +1,13 @@
+import { Hero, Navbar } from "../components";
+import { IntroHead } from "../containers";
+
 const Services = () => {
   return (
-    <section className="container-customer">
-      <h2>services</h2>
+    <section className="bg-yellow-200 container-customer">
+      <Navbar />
+      {/* <Hero /> */}
+      <IntroHead />
+      <div className="h-[100vh] w-full"></div>
     </section>
   );
 };

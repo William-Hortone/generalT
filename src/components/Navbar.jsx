@@ -87,7 +87,7 @@ const NavBar = () => {
       <div
         className={
           showMenu
-            ? "  bg-black absolute top-0 left-0 size-full z-50 transition-all duration-300 ease-in-out"
+            ? "  bg-black fixed top-0 left-0 size-full z-50 transition-all duration-300 ease-in-out"
             : "left-[-100%] absolute"
         }
       >

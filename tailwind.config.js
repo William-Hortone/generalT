@@ -20,7 +20,7 @@ module.exports = {
           100: "#00000079",
           200: "#F6F6F6",
         },
-        secondary: "#E2E2E2",
+        secondary: "#091423",
         white: "#E6E8EA",
         basic: "#FF6F61",
         origin: "#EF4444",
