@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { ViewTeam } from "../components";
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <>
+      <ViewTeam />
+    </>
+  );
+};
 
-export default About
+export default About;

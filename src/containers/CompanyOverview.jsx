@@ -5,7 +5,7 @@ import images from "../constants/images";
 const CompanyOverview = () => {
   return (
     <>
-      <section className="flex w-full h-full my-20 border-y-2 border-y-lightBlack-100 ">
+      <section className="flex w-full h-full my-20 bg-white border-y-2 border-y-lightBlack-100 ">
         <div className="flex flex-col w-1/2 h-full gap-4 p-8 divider">
           <CardImg img={images.pic1} />
           <CardImg img={images.pic2} />

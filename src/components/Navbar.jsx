@@ -10,11 +10,11 @@ import "./navbar.css";
 const navItems = [
   { title: "Home", link: "/" },
   { title: "Services", link: "/services" },
-  { title: "Customer", link: "/customer" },
+  // { title: "Customer", link: "/customer" },
   { title: "Gallery", link: "/gallery" },
 ];
 
-const NavBar = () => {
+const NavBar = ({ bg }) => {
   const [showMenu, setShowMenu] = useState(false);
   // const [isIndicatorActive, setIsIndicatorActive] = useState(false);
   const navContainerRef = useRef(null);
@@ -53,7 +53,8 @@ const NavBar = () => {
     <>
       <div
         ref={navContainerRef}
-        className="fixed inset-x-0 z-50 h-16 transition-all duration-700 border-none top-4 sm:inset-x-6"
+        style={{ backgroundColor: bg }}
+        className="fixed inset-x-0 z-50 h-16 transition-all duration-700 border-none rounded-lg top-4 sm:inset-x-6"
       >
         <header className="absolute w-full -translate-y-1/2 top-1/2">
           <nav className="flex items-center justify-between p-4 size-full">
@@ -65,7 +66,7 @@ const NavBar = () => {
             {/* Navigation Links  */}
             <div className="hidden md:block">
               {navItems.map((item, index) => (
-                <Link key={index} to={item.link} className="nav-hover-btn">
+                <Link key={index} to={item.link} className=" nav-hover-btn">
                   {item.title}
                 </Link>
               ))}
@@ -112,7 +113,7 @@ const NavBar = () => {
               Services
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/customer"
               className="link"
@@ -120,7 +121,7 @@ const NavBar = () => {
             >
               Customer
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               to="/gallery"

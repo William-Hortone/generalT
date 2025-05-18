@@ -43,7 +43,7 @@ body {
   font-family: "general", sans-serif;
   width: 100dvw;
   overflow-x: hidden;
-  background-color: #E6E8EA;
+  /* background-color: #E6E8EA; */
 }
 a {
   color: unset;

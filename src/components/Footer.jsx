@@ -16,25 +16,31 @@ const Footer = () => {
           <h2 className="text-2xl font-semibold">
             Tianjin General kouta <br /> international Trade Co. Ltd
           </h2>
-          <p>Looking forward to your cooperation</p>
+          <p className="font-robert-regular">Looking forward to your cooperation</p>
         </div>
       </div>
 
       {/* <div className="flex w-full h-auto bgd-red-500"> */}
-      <div className="flex flex-col justify-between w-full gap-16 px-8 md:flex-row ">
+      <div className="flex flex-col justify-between w-full gap-16 px-8 font-robert-regular md:flex-row ">
         <div className="flex flex-col">
           <a href="mailto:Poumskito8@gmail.com">Poumskito8@gmail.com</a>
           <a href="mailto:generalkouta21@gmail.com">generalkouta21@gmail.com</a>
         </div>
-        <div className="flex flex-col">
-          <div></div>
-          <p>+1 (289) 244-8690</p>
-          <p>+86 13311876241</p>
-          <p>+236 75508705</p>
-          <p>+236 72302835</p>
+        <div className="flex flex-row justify-between md:flex-col">
+          <div>
+            <p>+1 (289) 244-8690</p>
+            <p>+86 13311876241</p>
+          </div>
+          <div>
+            <p>+236 75508705</p>
+            <p>+236 72302835</p>
+          </div>
         </div>
         <div className="flex flex-col">
-          <p>Copyright©2025 GTTK.</p>
+          <div className="flex items-center justify-between w-full font-robert-regular md:justify-start">
+            <p>Copyright</p>
+            <p>©2025 GTTK</p>
+          </div>
           <p>
             Developed by <a href="#">WanTech</a>
           </p>

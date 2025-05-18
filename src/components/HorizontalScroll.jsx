@@ -9,45 +9,58 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = () => {
   const containerRef = useRef(null);
-  const pinRef = useRef(null);
+  const pinWrapRef = useRef(null); // safer pin target
 
   useEffect(() => {
-    const pin = pinRef.current;
+    const pinWrap = pinWrapRef.current;
     const container = containerRef.current;
-    const scrollWidth = pin.scrollWidth - window.innerWidth;
 
-    let ctx = gsap.context(() => {
-      gsap.to(pin, {
-        x: -scrollWidth / 2,
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          start: "top top",
-          end: () => `+=${scrollWidth}`,
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
+    if (!pinWrap || !container) return;
+
+    const scrollWidth = pinWrap.scrollWidth - window.innerWidth;
+
+    const ctx = gsap.context(() => {
+      const scrollTrigger = ScrollTrigger.create({
+        trigger: container,
+        start: "top top",
+        end: () => `+=${scrollWidth}`,
+        scrub: true,
+        pin: pinWrap,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        onUpdate: self => {
+          gsap.to(pinWrap, {
+            x: -self.progress * scrollWidth,
+            ease: "none",
+            overwrite: "auto",
+          });
         },
       });
+
+      return () => {
+        scrollTrigger.kill();
+      };
     }, containerRef);
 
-    return () => ctx.revert();
+    return () => ctx.revert(); // GSAP cleanup
   }, []);
 
   return (
     <section
       id="sectionPin"
-      className="flex flex-col justify-between bg-red-500 just"
+      className="flex flex-col justify-between bg-red-500"
       ref={containerRef}
     >
       <div className="z-50 flex justify-center w-full p-4 bg-purple-600">
-     
+        {/* Optional Top Content */}
       </div>
 
-      <div className="bg-green-200 pin-wrap" ref={pinRef}>
-        {teamData.map((member, index) => (
-          <CardImgTeam key={index} member={member} />
-        ))}
+      <div className="overflow-hidden bg-green-200 pin-wrap" ref={pinWrapRef}>
+        <div className="flex w-fit">
+          {teamData.map((member, index) => (
+            <CardImgTeam key={index} member={member} />
+          ))}
+        </div>
       </div>
 
       <div className="z-50 flex justify-center w-full p-4 bg-purple-600">

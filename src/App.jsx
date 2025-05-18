@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import "./App.css";
-import { About, Customer, Home, Services } from "./pages";
+import { About, Customer, Gallery, Home, Services } from "./pages";
 // import {PageTransition} from './components';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/customer" element={<Customer />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </AnimatePresence>
     </>

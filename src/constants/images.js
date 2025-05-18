@@ -12,6 +12,13 @@ import pic11 from "../assets/Picture11.png";
 import pic12 from "../assets/Picture12.png";
 import pic14 from "../assets/Picture14.png";
 import pic15 from "../assets/Picture15.png";
+import pic16 from "../assets/picture16.png";
+import pic17 from "../assets/Picture17.png";
+import pic18 from "../assets/Picture18.png";
+import pic19 from "../assets/Picture20.png";
+import pic20 from "../assets/picture19.png";
+import pic21 from "../assets/Picture21.png";
+// import pic122 from "../assets/Picture22.png";
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
 import team3 from "../assets/team3.png";
@@ -79,6 +86,13 @@ const images = {
   pic12,
   pic14,
   pic15,
+  pic16,
+  pic17,
+  pic18,
+  pic19,
+  pic20,
+  pic21,
+  // pic122,
   team1,
   team2,
   team3,

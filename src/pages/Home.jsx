@@ -1,17 +1,22 @@
 import React from "react";
-import { Footer, Hero, HorizontalScroll, Navbar } from "../components";
+import {
+  Footer,
+  Hero,
+  HorizontalScroll,
+  Navbar,
+  ViewTeam,
+} from "../components";
 import { CompanyOverview } from "../containers";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden bg-white">
       <Navbar />
       <Hero />
       <CompanyOverview />
-      <HorizontalScroll />
+      <ViewTeam />
       <Footer />
-      {/* <div className="h-[100vh]"></div> */}
-    </>
+    </div>
   );
 };
 

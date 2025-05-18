@@ -1,15 +1,15 @@
-import { Hero, Navbar, ServiceDisc } from "../components";
-import { IntroHead, Presentation } from "../containers";
+import { Footer, Navbar, ServiceDisc } from "../components";
+import { EnergySub, IntroHead, Presentation } from "../containers";
 
 const Services = () => {
   return (
     <section className="bg-white container-customer">
-      <Navbar />
-      {/* <Hero /> */}
+      <Navbar bg='black' />
       <IntroHead />
       <ServiceDisc />
       <Presentation />
-      <div className="h-[100vh] w-full"></div>
+      <EnergySub />
+      <Footer />
     </section>
   );
 };

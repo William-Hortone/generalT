@@ -6,9 +6,10 @@ import HorizontalScroll from "./HorizontalScroll";
 import Footer from "./Footer";
 import ServiceDisc from "./ServiceDisc";
 import TextAnimation from "./title/TextAnimation";
-import ParagraphText from './title/ParagraphText';
-
-
+import ParagraphText from "./title/ParagraphText";
+import ProductOverview from "./ProductOverview";
+import ViewTeam from "./ViewTeam";
+import ImagesList from "./ImageList";
 
 export {
   Hero,
@@ -19,5 +20,8 @@ export {
   Footer,
   ServiceDisc,
   TextAnimation,
-  ParagraphText
+  ParagraphText,
+  ProductOverview,
+  ViewTeam,
+  ImagesList,
 };
