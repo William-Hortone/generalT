@@ -1,7 +1,6 @@
-.divider{
-    border-right: 1px solid #00000079;
+.divider {
+  border-right: 1px solid #00000079;
 }
-
 
 /* Scrollbar styling for webkit browsers */
 ::-webkit-scrollbar {
@@ -20,7 +19,7 @@
 body {
   font-family: "PP Neue Montreal", sans-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   letter-spacing: -0.02em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -228,17 +227,6 @@ header {
   margin-left: 3rem;
 }
 
-.nav-links-btn {
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: var(--offblack);
-  text-transform: lowercase;
-  position: relative;
-  overflow: hidden;
-  filter: blur(1px);
-  transition: filter 0.3s ease;
-}
-
 .nav-links a:hover {
   filter: blur(0);
 }
@@ -273,7 +261,7 @@ header {
   z-index: 1;
 }
 
-.texture-overlay {
+/* .texture-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -290,7 +278,7 @@ header {
 .svg-container {
   position: relative;
   overflow: hidden;
-  /* background-color: #FFD700; */
+
 }
 
 .svg-texture-overlay {
@@ -306,7 +294,7 @@ header {
   opacity: 0.7;
   z-index: 2;
   pointer-events: none;
-}
+} */
 
 .hero-right {
   padding-left: 2rem;
@@ -331,18 +319,29 @@ header {
   overflow: hidden;
 }
 
+/* html {
+  font-size: calc(100vw / 1512 * 10);
+} */
+
+/* .image-scroll-wrapper {
+  font-size: calc(100vw / 1512 * 10);
+} */
+
 .gallery-wrapper {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 3rem;
   overflow: visible;
+  flex-wrap: nowrap;
 }
 
 /* Initialize gallery images */
 .gallery-item {
-  flex: 0 0 25rem;
-  height: 35rem;
+  flex: 0 0 20rem;
+  /* height: auto; */
+  /* height: 35rem; */
+  flex-wrap: wrap;
   overflow: hidden;
   position: relative;
 }
@@ -360,6 +359,25 @@ header {
   filter: grayscale(0%);
 }
 
+@media screen and (max-width: 1600px) {
+  .gallery-item {
+    flex: 0 0 15rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .gallery-item {
+    flex: 0 0 10rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .gallery-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .gallery-item {
+    flex: 0 0 15rem;
+  }
+}
 .gallery-caption {
   max-width: 80rem;
   /* margin: 0 auto; */
@@ -373,7 +391,7 @@ header {
 }
 
 /* Footer Section */
-.footer {
+/* .footer {
   min-height: 55vh;
   position: relative;
   display: flex;
@@ -418,9 +436,9 @@ header {
   opacity: 0.5;
   z-index: 2;
   pointer-events: none;
-}
+} */
 
-.footer-cta {
+/* .footer-cta {
   position: relative;
   z-index: 3;
   display: flex;
@@ -444,7 +462,7 @@ header {
   color: var(--offblack);
   text-decoration: none;
 }
-
+ */
 
 /* Improve scroll performance */
 html.lenis {
@@ -460,20 +478,19 @@ html.lenis {
 }
 
 /* Force GPU acceleration */
-.hero-image, 
-.gallery-item img, 
+.hero-image,
+.gallery-item img,
 .footer-svg-paths path {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
-
+/* 
 .scroll-indicator {
   height: 2px;
   width: 0%;
   background: #FFD700;
   transition: width 0.2s ease-out;
-}
-
+} */
 
 /* 11111111111111111111111111111111111111111111111111111111 \\\\\\\\\\\\\\\\\\*/
 
@@ -492,10 +509,6 @@ html.lenis {
   padding: 0;
   box-sizing: border-box;
 } */
-
-html {
-  font-size: calc(100vw / 1512 * 10);
-}
 
 /* Lenis smooth scrolling styles */
 
@@ -525,7 +538,7 @@ html {
 } */
 
 /* Animated noise effect */
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   top: -50%;
@@ -540,7 +553,7 @@ body::before {
   will-change: transform;
   z-index: 100;
   pointer-events: none;
-}
+} */
 
 @keyframes noise-animation {
   0% {
@@ -577,19 +590,3 @@ body::before {
     transform: translate(1%, 0);
   }
 }
-
-/* Dust/Scratches background effect for the entire site */
-/* body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://img.freepik.com/premium-photo/white-dust-scratches-black-background_279525-2.jpg?w=640");
-  background-repeat: repeat;
-  opacity: 0.5;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  z-index: 999;
-} */

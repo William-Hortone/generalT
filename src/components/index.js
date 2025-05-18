@@ -6,6 +6,10 @@ import HorizontalScroll from "./HorizontalScroll";
 import Footer from "./Footer";
 import ServiceDisc from "./ServiceDisc";
 import TextAnimation from "./title/TextAnimation";
+import ParagraphText from './title/ParagraphText';
+
+
+
 export {
   Hero,
   Navbar,
@@ -15,4 +19,5 @@ export {
   Footer,
   ServiceDisc,
   TextAnimation,
+  ParagraphText
 };

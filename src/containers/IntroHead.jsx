@@ -58,7 +58,7 @@ const IntroHead = () => {
           <img
             src={images.pic1}
             className="object-cover w-full h-full rounded-lg"
-            alt=""
+            alt="overview"
           />
         </div>
         <ul className="flex flex-col">

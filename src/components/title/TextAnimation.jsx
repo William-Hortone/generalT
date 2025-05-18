@@ -45,7 +45,7 @@ const TextAnimation = ({ textContent }) => {
 
   return (
     <div ref={containerRef} className="w-auto p-8 ">
-      <div className="mb-12 text-3xl leading-relaxed">
+      <div className="mb-12 text-xl leading-relaxed md:text-3xl">
         {textContent.split("").map((char, i) => (
           <span key={`char-${i}`} className="inline-block char">
             {char === " " ? "\u00A0" : char}

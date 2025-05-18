@@ -1,5 +1,5 @@
 import { Hero, Navbar, ServiceDisc } from "../components";
-import { IntroHead } from "../containers";
+import { IntroHead, Presentation } from "../containers";
 
 const Services = () => {
   return (
@@ -8,6 +8,7 @@ const Services = () => {
       {/* <Hero /> */}
       <IntroHead />
       <ServiceDisc />
+      <Presentation />
       <div className="h-[100vh] w-full"></div>
     </section>
   );
