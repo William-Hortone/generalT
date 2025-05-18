@@ -1,10 +1,8 @@
-import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
-import { About, Customer, Gallery, Home, Services } from "./pages";
+import { About, Gallery, Home, Services } from "./pages";
 // import {PageTransition} from './components';
-
 function App() {
   const location = useLocation();
 

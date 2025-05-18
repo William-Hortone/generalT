@@ -1,6 +1,5 @@
-import React from "react";
 import images from "../constants/images";
-
+import React from "react";
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-between w-full pt-16 text-white h-dvh bg-secondary">
@@ -16,11 +15,12 @@ const Footer = () => {
           <h2 className="text-2xl font-semibold">
             Tianjin General kouta <br /> international Trade Co. Ltd
           </h2>
-          <p className="font-robert-regular">Looking forward to your cooperation</p>
+          <p className="font-robert-regular">
+            Looking forward to your cooperation
+          </p>
         </div>
       </div>
 
-      {/* <div className="flex w-full h-auto bgd-red-500"> */}
       <div className="flex flex-col justify-between w-full gap-16 px-8 font-robert-regular md:flex-row ">
         <div className="flex flex-col">
           <a href="mailto:Poumskito8@gmail.com">Poumskito8@gmail.com</a>
@@ -42,9 +42,15 @@ const Footer = () => {
             <p>©2025 GTTK</p>
           </div>
           <p>
-            Developed by <a href="#">WanTech</a>
+            Developed by{" "}
+            <a
+              href="https://wan-tech.vercel.app/"
+              className="font-bold hover:text-primary"
+            >
+              {" "}
+              WanTech
+            </a>
           </p>
-          {/* </div> */}
         </div>
       </div>
       <div className="z-50 flex justify-center w-full text-[10vw]  p-4 bgd-purple-600">

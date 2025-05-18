@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { useEffect, useRef } from "react";
 
 import gsap from "gsap";
-import images from "../constants/images";
 
 const ProductOverview = ({ x, title, text, image }) => {
   const itemContent = useRef(null);

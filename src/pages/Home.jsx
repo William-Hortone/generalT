@@ -1,10 +1,8 @@
-import React from "react";
 import {
   Footer,
   Hero,
-  HorizontalScroll,
   Navbar,
-  ViewTeam,
+  ViewTeam
 } from "../components";
 import { CompanyOverview } from "../containers";
 

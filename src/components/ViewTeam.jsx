@@ -2,7 +2,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { teamData } from "../constants/data";
-import ImagesList from "./ImageList";
 
 gsap.registerPlugin(ScrollTrigger);
 
