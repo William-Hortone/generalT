@@ -1,9 +1,4 @@
-import {
-  Footer,
-  Hero,
-  Navbar,
-  ViewTeam
-} from "../components";
+import { Footer, Hero, Navbar, ViewTeam } from "../components";
 import { CompanyOverview } from "../containers";
 
 const Home = () => {

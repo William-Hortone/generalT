@@ -1,11 +1,64 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import CardImg from "../components/CardImg";
 import images from "../constants/images";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const CompanyOverview = () => {
+  const textAnimRef = useRef(null);
+  const secondTextAnimRef = useRef(null);
+
+  useEffect(() => {
+    const textAnim = textAnimRef.current;
+    const secondTextAnim = secondTextAnimRef.current;
+
+    gsap.fromTo(
+      textAnim,
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: textAnim,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      }
+    );
+    gsap.fromTo(
+      secondTextAnim,
+      {
+        y: 400,
+        opacity: 0,
+      },
+      {
+        y: 200,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: secondTextAnim,
+          start: "top 100%",
+          end: "bottom 80%",
+          scrub: true,
+        },
+      }
+    );
+
+    // Clean up
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
   return (
     <>
-      <section className="flex w-full h-full my-20 bg-white border-y-2 border-y-lightBlack-100 ">
+      <section className="flex w-full h-full my-20 overflow-scroll bg-white border-y-2 border-y-lightBlack-100 ">
         <div className="flex flex-col w-1/2 h-full gap-4 p-8 divider">
           <CardImg img={images.pic1} />
           <CardImg img={images.pic2} />
@@ -14,9 +67,12 @@ const CompanyOverview = () => {
           <CardImg img={images.pic5} />
         </div>
 
-        <div className="w-full h-full min-h-[60vh] md:min-h-[150vh] flex flex-col bg-white justify-between  top-8">
-          <div className="sticky w-full  md:h-[20vh]  top-8 bg-dneutral-400  p-8">
-            <h2 className="mb-4 text-3xl font-semibold uppercase md:text-xl font-zentry ">
+        <div className="w-full overflow-scroll h-[60vh] md:h-[150vh] flex flex-col justify-between ">
+          <div
+            ref={textAnimRef}
+            className="sticky w-full h-[20vh] top-8 bg-white p-8"
+          >
+            <h2 className="mb-4 text-3xl font-semibold uppercase md:text-xl font-zentry">
               Company Profile
             </h2>
             <p>
@@ -28,7 +84,10 @@ const CompanyOverview = () => {
               marketplace.
             </p>
           </div>
-          <div className="sticky self-center w-full h-auto p-8 bg-white top-8 justify-self-center">
+          <div
+            ref={secondTextAnimRef}
+            className="self-center w-full h-auto p-8 bg-white top-8 justify-self-center"
+          >
             <h2 className="mb-4 text-3xl font-semibold uppercase md:text-xl font-zentry ">
               Our Mission
             </h2>

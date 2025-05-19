@@ -19,7 +19,6 @@
 body {
   font-family: "PP Neue Montreal", sans-serif;
   font-weight: 700;
-  /* font-size: 1.8rem; */
   letter-spacing: -0.02em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,23 +28,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Background noise effect */
-/* body::before {
-  content: "";
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: transparent
-    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
-  background-size: 300px 300px;
-  animation: noise-animation 0.3s steps(5) infinite;
-  opacity: 0.9;
-  will-change: transform;
-  z-index: 100;
-  pointer-events: none;
-} */
 
 @keyframes noise-animation {
   0% {
