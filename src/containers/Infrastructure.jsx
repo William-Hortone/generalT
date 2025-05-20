@@ -31,7 +31,7 @@ export const Infrastructure = () => {
 
 
 
-const SECTION_HEIGHT = 1500;
+const SECTION_HEIGHT = 2300;
 
 const Hero = () => {
     return (
@@ -51,8 +51,8 @@ const Hero = () => {
 const CenterImage = () => {
     const { scrollY } = useScroll();
 
-    const clip1 = useTransform(scrollY, [0, 1500], [25, 0]);
-    const clip2 = useTransform(scrollY, [0, 1500], [75, 100]);
+    const clip1 = useTransform(scrollY, [0, 2300], [25, 0]);
+    const clip2 = useTransform(scrollY, [0, 2300], [75, 100]);
 
     const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`;
 
@@ -74,7 +74,7 @@ const CenterImage = () => {
                 clipPath,
                 backgroundSize,
                 opacity,
-                backgroundImage: `url(${images.pic5})`,
+                backgroundImage: `url(${images.pic22})`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
             }}
@@ -86,7 +86,7 @@ const ParallaxImages = () => {
     return (
         <div className="mx-auto max-w-5xl px-4 pt-[200px]">
             <ParallaxImg
-                src={images.pic3}
+                src={images.pic5}
                 alt="And example of a space launch"
                 start={-200}
                 end={200}
@@ -174,12 +174,16 @@ const ScheduleItem = ({ title, date, location, member }) => {
             className="flex items-center justify-between px-3 border-b mb-9 border-zinc-800 pb-9"
         >
 
-            <div className="w-auto h-[5rem]">
-                <img src={member.img} alt="member" className="object-cover w-full h-full" />
-            </div>
-            <div>
-                <p className="mb-1.5 text-xl text-zinc-50">{member.name}</p>
-                <p className="text-sm uppercase text-zinc-500">{member.position}</p>
+            <div className="flex items-center gap-4">
+
+                <div className="w-auto h-[5rem]">
+                    <img src={member.img} alt="member" className="object-cover w-full h-full" />
+                </div>
+                <div className=" justify-self-start">
+
+                    <p className="mb-1.5 text-sm md:text-xl text-zinc-50">{member.name}</p>
+                    <p className="text-xs uppercase md:text-sm text-zinc-500">{member.position}</p>
+                </div>
             </div>
             <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
                 <p>{member.location}</p>

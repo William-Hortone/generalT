@@ -8,16 +8,13 @@ const TextAnimation = ({ textContent }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Wait for DOM to be fully rendered
-    const chars = gsap.utils.toArray(".char");
+    const chars = gsap.utils.toArray(containerRef.current.querySelectorAll(".char"));
 
-    // Set initial state
     gsap.set(chars, {
       opacity: 0,
       y: 20,
     });
 
-    // Create timeline with ScrollTrigger
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
@@ -28,18 +25,17 @@ const TextAnimation = ({ textContent }) => {
       },
     });
 
-    // Character animation
     tl.to(chars, {
       opacity: 1,
       y: 0,
-      duration: 0.5,
+      duration: 0.3,
       stagger: 0.03,
       ease: "back.out(1.7)",
     });
 
     return () => {
-      // Clean up ScrollTriggers
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      tl.scrollTrigger?.kill();
+      tl.kill();
     };
   }, []);
 

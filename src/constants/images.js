@@ -18,6 +18,7 @@ import pic18 from "../assets/Picture18.png";
 import pic19 from "../assets/Picture20.png";
 import pic20 from "../assets/picture19.png";
 import pic21 from "../assets/Picture21.png";
+import pic22 from "../assets/picture22.jpg";
 // import pic122 from "../assets/Picture22.png";
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
@@ -96,7 +97,7 @@ const images = {
   pic19,
   pic20,
   pic21,
-  // pic122,
+  pic22,
   team1,
   team2,
   team3,
