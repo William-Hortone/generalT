@@ -47,7 +47,7 @@ export const teamData = [
     location: "Gabon",
   },
   {
-    position: "MANAGER",
+    position: "MARKETING DIRECTOR",
     img: images.team6,
     name: "Yarafa née Zakaria Mathurine Valérie",
     phone: "Tel : 0023675508705 / +23674126967",

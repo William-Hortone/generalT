@@ -61,13 +61,13 @@ const EnergySub = () => {
           AI-Driven Solutions
         </h2>
 
-        <div className="md:my-[2rem] text-white w-full gallery-caption">
+        {/* <div className="md:my-[2rem] text-white w-full gallery-caption">
           <TextAnimation
             textContent="General techniques and trade Kouta offers a range of advanced agricultural machinery, covering plowing, planting, 
 harvesting, and irrigation processes. Our machinery comes from leading Chinese manufacturers, combining innovative 
 technology and durable designs to help farmers improve productivity and reduce labor intensity."
           />
-        </div>
+        </div> */}
       </div>
 
       <div className="relative flex flex-col w-full h-auto border-t border-t-lightBlack-200">

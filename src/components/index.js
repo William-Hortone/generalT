@@ -10,6 +10,7 @@ import ParagraphText from "./title/ParagraphText";
 import ProductOverview from "./ProductOverview";
 import ViewTeam from "./ViewTeam";
 import ImagesList from "./ImageList";
+import { RevealLinks } from "./title/RevealLinks";
 
 export {
   Hero,
@@ -24,4 +25,5 @@ export {
   ProductOverview,
   ViewTeam,
   ImagesList,
+  RevealLinks,
 };

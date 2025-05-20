@@ -52,7 +52,7 @@ const ProductOverview = ({ x, title, text, image }) => {
   });
   return (
     <>
-      {/* <div className="relative flex flex-col w-full border-t h-vhd border-t-lightBlack-200"> */}
+
       {/* Content with animated border */}
       <div
         ref={itemContent}

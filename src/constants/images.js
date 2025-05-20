@@ -52,6 +52,10 @@ import product20 from "../assets/product20.png";
 import product21 from "../assets/product21.png";
 import product22 from "../assets/product22.png";
 import product23 from "../assets/product23.png";
+import product27 from "../assets/produit27.png";
+import product28 from "../assets/product28.jpg";
+import product29 from "../assets/product29.jpg";
+import product30 from "../assets/product30.jpg";
 
 import article1 from "../assets/article1.jpg";
 // import article2 from "../assets/article2.jpg";
@@ -126,7 +130,10 @@ const images = {
   product21,
   product22,
   product23,
-
+  product27,
+  product28,
+  product29,
+  product30,
   article1,
   article3,
   article4,

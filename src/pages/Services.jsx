@@ -1,5 +1,5 @@
 import { Footer, Navbar, ServiceDisc } from "../components";
-import { EnergySub, IntroHead, Presentation } from "../containers";
+import { EnergySub, IntroHead, TextParallaxContentSection } from "../containers";
 
 const Services = () => {
   return (
@@ -7,7 +7,8 @@ const Services = () => {
       <Navbar bg='black' />
       <IntroHead />
       <ServiceDisc />
-      <Presentation />
+      <TextParallaxContentSection />
+      {/* <Presentation /> */}
       <EnergySub />
       <Footer />
     </section>
