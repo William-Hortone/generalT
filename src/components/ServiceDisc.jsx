@@ -54,13 +54,13 @@ const ServiceDisc = () => {
   ];
 
   return (
-    <section id="gallery" className=" overflow-hidden bg-secondary py-24 mb-[20rem] gallery">
-      <div className="container ">
+    <section id="gallery" className=" min-h-screen overflow-hidden bg-secondary pdy-24 mb-[20rem] gallery">
+      <div className="containerv ">
         <div className="row">
-          <div className="flex flex-col justify-center col-12">
+          <div className="flex flex-col justify-center w-full h-screen gap-28 ">
 
 
-            <div className="gallery-wrapper image-scroll-wrapper">
+            <div className="flex justify-center gap-8 gallery-wrapper image-scroll-wrapdper">
               {galleryImages.map((img, index) => (
                 <div className="gallery-item" key={index}>
                   <img src={img} loading="lazy" alt={`Gallery  ${index + 1}`} />
@@ -68,7 +68,7 @@ const ServiceDisc = () => {
               ))}
             </div>
 
-            <div className="md:my-[10rem] text-white w-full bg-rfed-400  gallery-caption">
+            <div className="w-full pl-4 text-white gallery-caption">
               <TextAnimation
                 textContent={`We build bridges between China and Africa, offering a diverse range of products tailored to meet various needs.\nWhether it’s cutting-edge electronics, luxurious beauty products, or innovative agricultural machinery,\nwe meticulously source items to ensure quality and reliability.`}
               />

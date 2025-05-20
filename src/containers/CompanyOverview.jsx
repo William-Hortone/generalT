@@ -1,6 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import CardImg from "../components/CardImg";
-import images from "../constants/images";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -60,11 +58,11 @@ const CompanyOverview = () => {
     <>
       <section className="flex w-full h-full my-20 overflow-scroll bg-white border-y-2 border-y-lightBlack-100 ">
         <div className="flex flex-col w-1/2 h-full gap-4 p-8 divider">
-          <CardImg img={images.pic1} />
+          {/* <CardImg img={images.pic1} />
           <CardImg img={images.pic2} />
           <CardImg img={images.pic3} />
-          {/* <CardImg img={images.pic4} /> */}
-          <CardImg img={images.pic5} />
+          <CardImg img={images.pic4} />
+          <CardImg img={images.pic5} /> */}
         </div>
 
         <div className="w-full overflow-scroll h-[60vh] md:h-[150vh] flex flex-col justify-between ">

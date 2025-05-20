@@ -6,9 +6,7 @@ const Home = () => {
     <div className="overflow-x-hidden bg-white">
       <Navbar />
       <Hero />
-      {/* <div className="h-[100vh] w-full">
-        <h2>hello</h2>
-      </div> */}
+     
       <div className="md:my-[10rem] mt-24 p-8  text-black w-full md:w-1/2   ">
         <h2 className="pl-6 text-3xl text-black uppercase text-start">
           Company Profile

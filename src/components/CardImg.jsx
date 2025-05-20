@@ -26,8 +26,8 @@ const CardImg = ({img}) => {
       });
   return (
 <>
-    <div className="rounded-lg">
-        <img className="object-cover w-full h-auto rounded-lg" src={img} alt="description" />
+    <div className="rounded-lg w-[10rem] h-auto">
+        <img className="object-cover w-full h-auto rounded-lg" src={img} loading="lazy" alt="description" />
     </div>
 </>
   )
