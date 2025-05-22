@@ -111,11 +111,11 @@ const IntroHead = () => {
 
       <div
         ref={rightRef}
-        className="flex flex-col items-center min-h-full  pb-24 h-auto justify-center md:justify-between w-full md:w-[65vw]   gap-4 p-8 "
+        className="flex flex-col items-center min-h-full pb-0  h-auto justify-center md:justify-between w-full md:w-[65vw]   gap-4 p-8 "
       >
         <h1
           ref={titleRef}
-          className="z-40 flex gap-1 special-font hero-heading bottom-5 right-5"
+          className="z-40 flex gap-1 pb-0 special-font hero-heading bottom-5 right-5"
         >
           {text.split("").map((char, i) => (
             <span key={i} className="inline-block">

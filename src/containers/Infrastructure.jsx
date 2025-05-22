@@ -36,7 +36,7 @@ const SECTION_HEIGHT = 2300;
 const Hero = () => {
     return (
         <div
-            style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
+            style={{ height: `calc(${SECTION_HEIGHT}px + 30vh)` }}
             className="relative w-full"
         >
             <CenterImage />
@@ -165,7 +165,7 @@ const Schedule = () => {
     );
 };
 
-const ScheduleItem = ({ title, date, location, member }) => {
+const ScheduleItem = ({  member }) => {
     return (
         <motion.div
             initial={{ y: 48, opacity: 0 }}
@@ -176,7 +176,7 @@ const ScheduleItem = ({ title, date, location, member }) => {
 
             <div className="flex items-center gap-4">
 
-                <div className="w-auto h-[5rem]">
+                <div className="w-auto md:h-[5rem] h-[8rem]">
                     <img src={member.img} alt="member" className="object-cover w-full h-full" />
                 </div>
                 <div className=" justify-self-start">
@@ -186,7 +186,7 @@ const ScheduleItem = ({ title, date, location, member }) => {
                 </div>
             </div>
             <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
-                <p>{member.location}</p>
+                <p className="hidden md:block">{member.location}</p>
                 <FiMapPin />
             </div>
         </motion.div>
