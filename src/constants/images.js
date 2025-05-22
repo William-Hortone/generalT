@@ -57,6 +57,7 @@ import product27 from "../assets/produit27.png";
 import product28 from "../assets/product28.jpg";
 import product29 from "../assets/product29.jpg";
 import product30 from "../assets/product30.jpg";
+import hero from "../assets/hero-1.jpg";
 
 import article1 from "../assets/article1.jpg";
 // import article2 from "../assets/article2.jpg";
@@ -149,6 +150,7 @@ const images = {
   article12,
   article13,
   article19,
+  hero
 };
 
 export default images;

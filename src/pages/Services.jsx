@@ -3,7 +3,7 @@ import { EnergySub, IntroHead, TextParallaxContentSection } from "../containers"
 
 const Services = () => {
   return (
-    <section className="bg-white container-customer">
+    <section className="h-auto bg-white s-customer">
       <Navbar bg='black' />
       <IntroHead />
       <ServiceDisc />

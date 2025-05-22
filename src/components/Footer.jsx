@@ -62,7 +62,7 @@ const Footer = () => {
   return (
     <footer
       ref={containerRef}
-      className="flex flex-col items-center justify-between w-full pt-16 text-black bg-green-300 overflodw-hidden h-dvh"
+      className="flex flex-col items-center justify-between w-full pt-2 overflow-hidden text-black bg-green-300 md:pt-16 overflodw-hidden h-dvh"
     >
       {/* Top Section */}
       <div className="flex flex-col w-full h-auto md:flex-row">
@@ -90,7 +90,7 @@ const Footer = () => {
       <RevealLinks />
 
       {/* Contact Info */}
-      <div className="flex flex-col justify-between w-full gap-16 px-8 text-black font-robert-regular md:flex-row">
+      <div className="flex flex-col justify-between w-full gap-4 px-8 text-black md:gap-16 font-robert-regular md:flex-row">
         <div className="flex flex-col">
           <p>+1 (289) 244-8690</p>
           <p>+86 13311876241</p>

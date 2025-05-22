@@ -75,11 +75,11 @@ const IntroHead = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col-reverse w-full pt-20 bg-white md:flex-row h-100dvh "
+      className="relative flex flex-col-reverse w-full min-h-screen overflow-hidden bg-white md:pt-20 md:flex-row "
     >
       <div
         ref={leftRef}
-        className="flex flex-col justify-between border-r-2 border-b-2 border-b-lightBlack-100 border-r-lightBlack-100 w-full overflow-auto md:w-[35vw] h-[calc(100vh-5rem)] p-8 md:pr-0 "
+        className="flex flex-col pt-8   overflow-hidden justify-between border-r-2 border-b-2 border-b-lightBlack-100 border-r-lightBlack-100 w-full  md:w-[35vw]  p-8 md:pr-0 "
       >
         <div className="w-full md:pr-8 h-[30vh]">
           <img
@@ -99,19 +99,19 @@ const IntroHead = () => {
               <div
                 className="absolute top-0 left-0 transition-all duration-300 ease-in-out scale-95 translate-y-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100"
               >
-                <CardImg  img={item.img}/>
+                <CardImg img={item.img} />
               </div>
             </li>
           ))}
         </ul>
 
 
-        <p className="hidden font-bold md:block text-primary">Geneal Kouta</p>
+        <p className="hidden font-bold md:block ">Geneal Kouta</p>
       </div>
 
       <div
         ref={rightRef}
-        className="flex flex-col items-center justify-between w-full md:w-[65vw] h-[calc(100vh-5rem)]   gap-4 p-8 "
+        className="flex flex-col items-center min-h-full  pb-24 h-auto justify-center md:justify-between w-full md:w-[65vw]   gap-4 p-8 "
       >
         <h1
           ref={titleRef}

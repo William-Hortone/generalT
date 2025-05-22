@@ -1,8 +1,8 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ProductOverview, TextAnimation } from "../components";
+import { ProductOverview } from "../components";
 import images from "../constants/images";
-// import images from './../constants/images';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,14 +60,6 @@ const EnergySub = () => {
         <h2 className="p-8 text-3xl font-semibold uppercase text-primary md:text-xl font-zentry">
           AI-Driven Solutions
         </h2>
-
-        {/* <div className="md:my-[2rem] text-white w-full gallery-caption">
-          <TextAnimation
-            textContent="General techniques and trade Kouta offers a range of advanced agricultural machinery, covering plowing, planting, 
-harvesting, and irrigation processes. Our machinery comes from leading Chinese manufacturers, combining innovative 
-technology and durable designs to help farmers improve productivity and reduce labor intensity."
-          />
-        </div> */}
       </div>
 
       <div className="relative flex flex-col w-full h-auto border-t border-t-lightBlack-200">

@@ -8,7 +8,7 @@ const Home = () => {
       <Hero />
 
       <div className="md:my-[10rem] mt-24 p-8  text-black w-full md:w-1/2   ">
-        <h2 className="pl-6 text-3xl text-black uppercase text-start">
+        <h2 className="pl-6 text-3xl font-bold text-black uppercase font-zentry text-start">
           Company Profile
         </h2>
         <TextAnimation
@@ -19,7 +19,7 @@ const Home = () => {
         <div className="hidden md:w-1/2 md:block" />
         <div className="w-full md:w-1/2">
 
-          <h2 className="pl-6 text-3xl text-black uppercase text-start">
+          <h2 className="pl-6 text-3xl font-bold text-black uppercase font-zentry text-start">
             Our Mission
           </h2>
           <TextAnimation

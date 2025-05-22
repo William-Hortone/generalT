@@ -54,7 +54,7 @@ const ServiceDisc = () => {
   ];
 
   return (
-    <section id="gallery" className=" min-h-screen overflow-hidden bg-secondary pdy-24 mb-[20rem] gallery">
+    <section id="gallery" className=" min-h-screen overflow-hidden bg-secondary py-24 mb-[20rem] gallery">
       <div className="containerv ">
         <div className="row">
           <div className="flex flex-col justify-center w-full h-screen gap-28 ">
