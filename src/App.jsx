@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
-import "./App.css";
+import "./App.css"
 import { About, Gallery, Home, Services } from "./pages";
 function App() {
   const location = useLocation();

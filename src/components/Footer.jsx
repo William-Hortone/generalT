@@ -52,7 +52,7 @@ const Footer = () => {
         ease: "expo.out",
         scrollTrigger: {
           trigger: containerRef.current,
-         start: "top 10%",
+          start: "top 10%",
           toggleActions: "play none none reverse",
         },
       }
@@ -114,7 +114,7 @@ const Footer = () => {
               href="https://wan-tech.vercel.app/"
               className="font-bold text-primary hover:text-primary"
             >
-              {" "}
+
               WanTech
             </a>
           </p>
