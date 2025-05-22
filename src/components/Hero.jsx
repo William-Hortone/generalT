@@ -23,20 +23,29 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    if (loadedVideos === totalVideos - 1) {
-      setLoading(false);
-    }
-  }, [loadedVideos]);
-
-  useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768); 
+      const isSmall = window.innerWidth < 768;
+      setIsSmallScreen(isSmall);
+      if (isSmall) setLoading(false); // Skip loading screen for mobile
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Updated loading logic with fallback
+  useEffect(() => {
+    if (!isSmallScreen && loadedVideos >= totalVideos) {
+      setLoading(false);
+    }
+
+    const fallbackTimeout = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // Max 5 seconds loading
+
+    return () => clearTimeout(fallbackTimeout);
+  }, [loadedVideos, isSmallScreen]);
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
@@ -108,7 +117,7 @@ const Hero = () => {
       >
         {isSmallScreen ? (
           <img
-            src={images.hero} 
+            src={images.hero}
             alt="Hero Mobile"
             className="object-cover w-full h-full"
           />
