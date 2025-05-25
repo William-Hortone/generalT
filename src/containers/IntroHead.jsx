@@ -8,6 +8,25 @@ import { list } from "../constants/data";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const dataImages = [
+  {
+
+    image: images.pic1,
+  },
+  {
+
+    image: images.pic5,
+  },
+  {
+
+    image: images.pic3,
+  },
+  {
+
+    image: images.product14,
+  },
+]
+
 const IntroHead = () => {
   const leftRef = useRef(null);
   const rightRef = useRef(null);
@@ -17,33 +36,14 @@ const IntroHead = () => {
   const text = "services";
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const dataImages = [
-    {
-
-      image: images.pic1,
-    },
-    {
-
-      image: images.pic5,
-    },
-    {
-
-      image: images.pic3,
-    },
-    {
-
-      image: images.product14,
-    },
-  ]
 
   // Rotate images every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % dataImages.length);
     }, 5000);
-    console.log('helo');
     return () => clearInterval(interval);
-  }, [dataImages.length]);
+  }, []);
 
 
   useEffect(() => {
