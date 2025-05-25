@@ -26,7 +26,7 @@ const Hero = () => {
     const handleResize = () => {
       const isSmall = window.innerWidth < 768;
       setIsSmallScreen(isSmall);
-      if (isSmall) setLoading(false); // Skip loading screen for mobile
+      if (isSmall) setLoading(false); 
     };
 
     handleResize();
@@ -42,7 +42,7 @@ const Hero = () => {
 
     const fallbackTimeout = setTimeout(() => {
       setLoading(false);
-    }, 5000); // Max 5 seconds loading
+    }, 5000);
 
     return () => clearTimeout(fallbackTimeout);
   }, [loadedVideos, isSmallScreen]);

@@ -8,7 +8,6 @@ const Services = () => {
       <IntroHead />
       <ServiceDisc />
       <TextParallaxContentSection />
-      {/* <Presentation /> */}
       <EnergySub />
       <Footer />
     </section>

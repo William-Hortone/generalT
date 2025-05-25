@@ -6,8 +6,6 @@ export const RevealLinks = () => {
         <section className="grid gap-2 px-8 py-2 text-black bg-green-300 md:py-24 place-content-center">
             <FlipLink href="#">Poumskito8@gmail.com</FlipLink>
             <FlipLink href="#">generalkouta21@gmail.com</FlipLink>
-            {/* <FlipLink href="#">Facebook</FlipLink>
-            <FlipLink href="#">General TTK</FlipLink> */}
         </section>
     );
 };

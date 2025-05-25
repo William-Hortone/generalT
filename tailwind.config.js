@@ -53,6 +53,10 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
         },
+        moveText: {
+          '0%': { bottom: '-50px' },
+          '100%': { bottom: '30px' },
+        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",
@@ -66,6 +70,7 @@ module.exports = {
         textRotation: "textRotation 8s linear infinite",
         "sliding-move": "move 65s linear infinite",
         aurora: "aurora 60s linear infinite",
+        'move-up': 'moveText 3s 0.5s ease forwards',
       },
     },
   },

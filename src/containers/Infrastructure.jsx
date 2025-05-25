@@ -12,19 +12,8 @@ import images from './../constants/images';
 export const Infrastructure = () => {
     return (
         <div className="bg-zinc-950">
-            {/* <ReactLenis
-        root
-        options={{
-          // Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
-          lerp: 0.05,
-          //   infinite: true,
-          //   syncTouch: true,
-        }}
-      > */}
-
             <Hero />
             <Schedule />
-            {/* </ReactLenis> */}
         </div>
     );
 };
@@ -40,9 +29,7 @@ const Hero = () => {
             className="relative w-full"
         >
             <CenterImage />
-
             <ParallaxImages />
-
             <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
         </div>
     );
@@ -165,7 +152,7 @@ const Schedule = () => {
     );
 };
 
-const ScheduleItem = ({  member }) => {
+const ScheduleItem = ({ member }) => {
     return (
         <motion.div
             initial={{ y: 48, opacity: 0 }}
