@@ -41,8 +41,9 @@ const IntroHead = () => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % dataImages.length);
     }, 5000);
+    console.log('helo');
     return () => clearInterval(interval);
-  }, []);
+  }, [dataImages.length]);
 
 
   useEffect(() => {
@@ -124,7 +125,7 @@ const IntroHead = () => {
     >
       <div
         ref={leftRef}
-        className="flex  relative  flex-col pt-8 overflow-hidden justify-between border-r-2 border-b-2 border-b-lightBlack-100 border-r-lightBlack-100 w-full md:w-[35vw] p-8 md:pr-0"
+        className="flex  relative  flex-col pt-8 overflow-hidden justify-between border-r-2 border-b-2 border-b-lightBlack-100 border-r-lightBlack-100 w-full md:max-w-[35vw] p-8 md:pr-0"
       >
         <div className="w-full md:pr-8 h-[30vh]">
 
@@ -156,11 +157,11 @@ const IntroHead = () => {
 
       <div
         ref={rightRef}
-        className="flex flex-col  items-center min-h-full pb-0 h-auto justify-center md:justify-between w-full md:w-[65vw] gap-4 p-8"
+        className="flex flex-col items-center justify-center w-auto h-auto min-h-full gap-4 p-8 pb-0 md:justify-between md:w-full"
       >
         <h1
           ref={titleRef}
-          className="z-40 flex gap-1 pb-0 special-font hero-heading bottom-5 right-5"
+          className="z-40 flex text-[1rem] gap-1 pb-0 special-font hero-heading-tertiary bottom-5 right-5"
         >
           {text.split("").map((char, i) => (
             <span key={i} className="inline-block">

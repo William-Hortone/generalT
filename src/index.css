@@ -83,6 +83,9 @@ a {
   .hero-heading {
     @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
   }
+  .hero-heading-tertiary {
+    @apply uppercase font-zentry font-black text-5xl sm:text-7xl md:text-[8vw] 2xl:text-[12rem] ;
+  }
   .hero-heading-second {
     @apply uppercase font-zentry font-black text-2xl sm:right-10 sm:text-2xl md:text-4xl lg:text-[2rem];
   }
