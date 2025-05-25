@@ -11,6 +11,9 @@ import ProductOverview from "./ProductOverview";
 import ViewTeam from "./ViewTeam";
 import ImagesList from "./ImageList";
 import { RevealLinks } from "./title/RevealLinks";
+import ImagesGallery from "./ImagesGallery";
+
+
 
 export {
   Hero,
@@ -26,4 +29,5 @@ export {
   ViewTeam,
   ImagesList,
   RevealLinks,
+  ImagesGallery
 };

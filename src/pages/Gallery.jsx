@@ -1,108 +1,91 @@
-import { gsap } from "gsap";
-import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import { useEffect, useRef } from "react";
-import images from "../constants/images";
-// import "./HorizontalScrollGallery.css";
-
 import "./styles/gallery.css";
-
-import { Navbar } from "../components";
+import { ImagesGallery, Navbar } from "../components";
 
 const Gallery = () => {
-  const containerRef = useRef(null);
-  const scrollInstance = useRef(null);
 
-  useEffect(() => {
-    // Initialize Locomotive Scroll
-    scrollInstance.current = new LocomotiveScroll({
-      el: containerRef.current,
-      direction: "horizontal",
-      smooth: true,
-      lerp: 0.05,
-      tablet: { smooth: true },
-      smartphone: { smooth: true },
-    });
 
-    // Get all images
-    const images = containerRef.current.querySelectorAll(".image");
+  // useEffect(() => {
+  //   // Initialize Locomotive Scroll
+  //   scrollInstance.current = new LocomotiveScroll({
+  //     el: containerRef.current,
+  //     direction: "horizontal",
+  //     smooth: true,
+  //     lerp: 0.05,
+  //     tablet: { smooth: true },
+  //     smartphone: { smooth: true },
+  //   });
 
-    // Show images with animation
-    const showImages = () => {
-      gsap.to(images, {
-        opacity: 0.8,
-        scale: 1,
-        x: 0,
-        y: 0,
-        // filter: "grayscale(1)",
-        filter: "none",
-        duration: 1,
-        stagger: 0.05,
-        ease: "power2.out",
-      });
-    };
+  //   // Get all images
+  //   const images = containerRef.current.querySelectorAll(".image");
 
-    // Hide images with animation
-    const hideImages = () => {
-      gsap.to(images, {
-        opacity: 0,
-        scale: 0.8,
-        duration: 1,
-        ease: "power2.in",
-      });
-    };
+  //   // Show images with animation
+  //   const showImages = () => {
+  //     gsap.to(images, {
+  //       opacity: 0.8,
+  //       scale: 1,
+  //       x: 0,
+  //       y: 0,
+  //       // filter: "grayscale(1)",
+  //       filter: "none",
+  //       duration: 1,
+  //       stagger: 0.05,
+  //       ease: "power2.out",
+  //     });
+  //   };
 
-    // Click handler for images
-    const handleImageClick = (e) => {
-      const image = e.target;
-      gsap.to(image, {
-        scale: 5,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.in",
-        onComplete: () => {
-          hideImages();
-          setTimeout(showImages, 2000);
-        },
-      });
-    };
+  //   // Hide images with animation
+  //   const hideImages = () => {
+  //     gsap.to(images, {
+  //       opacity: 0,
+  //       scale: 0.8,
+  //       duration: 1,
+  //       ease: "power2.in",
+  //     });
+  //   };
 
-    // Add click event to each image
-    images.forEach((image) => {
-      image.addEventListener("click", handleImageClick);
-    });
+  //   // Click handler for images
+  //   const handleImageClick = (e) => {
+  //     const image = e.target;
+  //     gsap.to(image, {
+  //       scale: 5,
+  //       opacity: 0,
+  //       duration: 1,
+  //       ease: "power2.in",
+  //       onComplete: () => {
+  //         hideImages();
+  //         setTimeout(showImages, 2000);
+  //       },
+  //     });
+  //   };
 
-    // Initial show after 1 second
-    const showTimeout = setTimeout(showImages, 1000);
+  //   // Add click event to each image
+  //   images.forEach((image) => {
+  //     image.addEventListener("click", handleImageClick);
+  //   });
 
-    // Cleanup
-    return () => {
-      clearTimeout(showTimeout);
-      images.forEach((image) => {
-        image.removeEventListener("click", handleImageClick);
-      });
-      if (scrollInstance.current) {
-        scrollInstance.current.destroy();
-      }
-    };
-  }, []);
+  //   // Initial show after 1 second
+  //   const showTimeout = setTimeout(showImages, 1000);
+
+  //   // Cleanup
+  //   return () => {
+  //     clearTimeout(showTimeout);
+  //     images.forEach((image) => {
+  //       image.removeEventListener("click", handleImageClick);
+  //     });
+  //     if (scrollInstance.current) {
+  //       scrollInstance.current.destroy();
+  //     }
+  //   };
+  // }, []);
 
   return (
     <>
       <Navbar bg="black" />
 
-      <div className="scroll-gallery-container">
-        {/* Fake UI Elements */}
-        {/* <div className="fake-ui">
-        <div className="logo"></div>
-        <div className="nav">
-          <span className="item"></span>
-          <span className="item"></span>
-          <span className="item"></span>
-        </div>
-      </div> */}
-
-        {/* Main Scroll Container */}
+      <ImagesGallery />
+      {/* <div className="scroll-gallery-container">
+  
         <div
           className="scroll-animations-example"
           ref={containerRef}
@@ -272,19 +255,12 @@ const Gallery = () => {
                   alt={`Gallery item ${index}`}
                   loading="lazy"
                 />
-                {/* <img
-                className="image"
-                src={`https://picsum.photos/id/${item.id}/${
-                  item.orientation === "horizontal" ? "400/300" : "300/400"
-                }`}
-                alt={`Gallery item ${index}`}
-                loading="lazy"
-              /> */}
+       
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
