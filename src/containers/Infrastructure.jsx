@@ -163,7 +163,7 @@ const ScheduleItem = ({ member }) => {
 
             <div className="flex items-center gap-4">
 
-                <div className="w-auto md:h-[5rem] h-[10rem]">
+                <div className="md:w-auto w-[50%] md:h-[5rem] h-[10rem]">
                     <img src={member.img} alt="member" className="object-cover w-full h-full" />
                 </div>
                 <div className=" justify-self-start">
