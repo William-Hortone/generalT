@@ -25,7 +25,7 @@ const SECTION_HEIGHT = 2300;
 const Hero = () => {
     return (
         <div
-            style={{ height: `calc(${SECTION_HEIGHT}px + 30vh)` }}
+            style={{ height: `calc(${SECTION_HEIGHT}px)` }}
             className="relative w-full"
         >
             <CenterImage />
@@ -139,7 +139,7 @@ const Schedule = () => {
                 initial={{ y: 48, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ ease: "easeInOut", duration: 0.75 }}
-                className="mb-20 text-4xl font-black uppercase text-zinc-50"
+                className="mb-20 text-2xl font-black text-center uppercase md:text-4xl text-zinc-50"
             >
                 Meet Our Team
             </motion.h1>
@@ -163,7 +163,7 @@ const ScheduleItem = ({ member }) => {
 
             <div className="flex items-center gap-4">
 
-                <div className="w-auto md:h-[5rem] h-[8rem]">
+                <div className="w-auto md:h-[5rem] h-[10rem]">
                     <img src={member.img} alt="member" className="object-cover w-full h-full" />
                 </div>
                 <div className=" justify-self-start">
@@ -172,8 +172,8 @@ const ScheduleItem = ({ member }) => {
                     <p className="text-xs uppercase md:text-sm text-zinc-500">{member.position}</p>
                 </div>
             </div>
-            <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
-                <p className="hidden md:block">{member.location}</p>
+            <div className=" items-center hidden md:flex gap-1.5 text-end text-sm uppercase text-zinc-500">
+                <p className="">{member.location}</p>
                 <FiMapPin />
             </div>
         </motion.div>
