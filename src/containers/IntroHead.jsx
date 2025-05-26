@@ -8,23 +8,29 @@ import { list } from "../constants/data";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 const dataImages = [
   {
-
+    id: 1,
     image: images.pic1,
+    alt: "Cargo"
   },
   {
-
+    id: 2,
     image: images.pic5,
+    alt: "Export"
   },
   {
-
+    id: 3,
     image: images.pic3,
+    alt: "Connectivity"
   },
   {
-
+    id: 4,
     image: images.product14,
-  },
+    alt: "Logistics"
+  }
 ]
 
 const IntroHead = () => {
@@ -34,16 +40,20 @@ const IntroHead = () => {
   const titleRef = useRef(null);
   const listRef = useRef(null);
   const text = "services";
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
 
-  // Rotate images every 5 seconds
+  //Rotate images every 5s
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % dataImages.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % dataImages.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  })
+
+
+
 
 
   useEffect(() => {
@@ -127,17 +137,15 @@ const IntroHead = () => {
         ref={leftRef}
         className="flex  relative  flex-col pt-8 overflow-hidden justify-between border-r-2 border-b-2 border-b-lightBlack-100 border-r-lightBlack-100 w-full md:max-w-[35vw] p-8 md:pr-0"
       >
+        {/* Image Header */}
+
         <div className="w-full md:pr-8 h-[30vh]">
+          <img className="object-cover w-full h-full transition-all duration-300 ease-in-out rounded-lg" src={dataImages[currentIndex].image} alt={dataImages[currentIndex].alt} loading="lazy" />
 
-          <img
-            className="object-cover w-full h-full transition-all duration-700 ease-in-out rounded-lg"
-
-            src={dataImages[currentIndex].image}
-            alt="description"
-            loading="lazy"
-          />
         </div>
 
+
+        {/* services list */}
         <ul ref={listRef} className="flex flex-col">
           {list.map((item, index) => (
             <li

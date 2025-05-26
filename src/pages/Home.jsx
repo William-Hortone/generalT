@@ -15,7 +15,7 @@ const Home = () => {
           textContent='General techniques and trade Kouta is a dynamic enterprise dedicated to revolutionizing the trading experience by seamlessly connecting China and Africa. We specialize in providing superior products and AI-driven solutions tailored to meet diverse needs, empowering individuals and businesses to thrive in the global marketplace'
         />
       </div>
-      <div className="md:my-[10rem] py-8  md:px-8flex  text-black w-full   ">
+      <div className="md:my-[10rem] py-8  md:px-8  flex  text-black w-full   ">
         <div className="hidden md:w-1/2 md:block" />
         <div className="w-full md:w-1/2">
 
