@@ -62,7 +62,7 @@ const Footer = () => {
   return (
     <footer
       ref={containerRef}
-      className="flex flex-col items-center justify-between w-full pt-2 overflow-hidden text-black bg-green-300 md:pt-16 overflodw-hidden h-dvh"
+      className="flex flex-col items-center justify-between w-full pt-2 overflow-hidden text-black bg-green-300 md:pt-16 h-dvh"
     >
       {/* Top Section */}
       <div className="flex flex-col w-full h-auto md:flex-row">

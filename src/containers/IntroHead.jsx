@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BsArrowDown } from "react-icons/bs";
 import images from "../constants/images";
-import { CardImg } from "../components";
+import { CardImg, LinksOverview } from "../components";
 import { list } from "../constants/data";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -105,23 +105,23 @@ const IntroHead = () => {
       });
 
       // Animate each <li> one by one from bottom
-      const listItems = gsap.utils.toArray(
-        listRef.current.querySelectorAll("li")
-      );
+      // const listItems = gsap.utils.toArray(
+      //   listRef.current.querySelectorAll("li")
+      // );
 
-      gsap.set(listItems, {
-        opacity: 0,
-        y: 40,
-      });
+      // gsap.set(listItems, {
+      //   opacity: 0,
+      //   y: 40,
+      // });
 
-      gsap.to(listItems, {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        stagger: 0.15,
-        ease: "power3.out",
-        delay: 0.8,
-      });
+      // gsap.to(listItems, {
+      //   opacity: 1,
+      //   y: 0,
+      //   duration: 0.6,
+      //   stagger: 0.15,
+      //   ease: "power3.out",
+      //   delay: 0.8,
+      // });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -131,22 +131,23 @@ const IntroHead = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative flex flex-col-reverse w-full min-h-screen overflow-hidden bg-white md:pt-20 md:flex-row"
+      className="relative pt-[8rem] flex flex-col-reverse w-full min-h-screen overflow-hidden bg-white md:pt-20 md:flex-row"
     >
       <div
         ref={leftRef}
-        className="flex  relative  flex-col pt-8 overflow-hidden justify-between border-r-2 border-b-2 border-b-lightBlack-100 border-r-lightBlack-100 w-full md:max-w-[35vw] p-8 md:pr-0"
+        className="flex  relative  flex-col pt-8 overflow-hidden justify-between border-r-2 border-b-2 border-b-neutral-400 border-r-neutral-400 w-full md:w-[50vw]  "
       >
         {/* Image Header */}
 
-        <div className="w-full md:pr-8 h-[30vh]">
+        <div className="w-full pl-8 pr-8 md:pr-8 h-[35vh]">
           <img className="object-cover w-full h-full transition-all duration-300 ease-in-out rounded-lg" src={dataImages[currentIndex].image} alt={dataImages[currentIndex].alt} loading="lazy" />
 
         </div>
 
+        <LinksOverview />
 
         {/* services list */}
-        <ul ref={listRef} className="flex flex-col">
+        {/* <ul ref={listRef} className="flex flex-col">
           {list.map((item, index) => (
             <li
               key={index}
@@ -158,14 +159,14 @@ const IntroHead = () => {
               </div>
             </li>
           ))}
-        </ul>
-        <span />
-        <p className="absolute hidden font-bold uppercase whitespace-nowrap animate-move-up left-8 md:block text-primary">Geneal Kouta</p>
+        </ul> */}
+        {/* <span /> */}
+        {/* <p className="absolute hidden font-bold uppercase whitespace-nowrap animate-move-up left-8 md:block text-primary">Geneal Kouta</p> */}
       </div>
 
       <div
         ref={rightRef}
-        className="flex flex-col items-center justify-center w-auto h-auto min-h-full gap-4 p-8 pb-0 md:justify-between md:w-full"
+        className="flex flex-col items-center justify-center w-full h-auto min-h-full gap-4 p-8 pb-0 md:justify-between md:w-[50vw]"
       >
         <h1
           ref={titleRef}

@@ -13,6 +13,8 @@ import ImagesList from "./ImageList";
 import { RevealLinks } from "./title/RevealLinks";
 import ImagesGallery from "./ImagesGallery";
 import { ImageTrailHero } from "./ImageTrailHero";
+import { LinksOverview } from "./LinksOverview";
+import { ServicesOverview } from "./ServicesOverview";
 
 
 
@@ -31,5 +33,7 @@ export {
   ImagesList,
   RevealLinks,
   ImagesGallery,
-  ImageTrailHero
+  ImageTrailHero,
+  LinksOverview,
+  ServicesOverview
 };
