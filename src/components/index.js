@@ -12,6 +12,9 @@ import ViewTeam from "./ViewTeam";
 import ImagesList from "./ImageList";
 import { RevealLinks } from "./title/RevealLinks";
 import ImagesGallery from "./ImagesGallery";
+import { ImageTrailHero } from "./ImageTrailHero";
+import { LinksOverview } from "./LinksOverview";
+import { ServicesOverview } from "./ServicesOverview";
 
 
 
@@ -29,5 +32,8 @@ export {
   ViewTeam,
   ImagesList,
   RevealLinks,
-  ImagesGallery
+  ImagesGallery,
+  ImageTrailHero,
+  LinksOverview,
+  ServicesOverview
 };

@@ -4,7 +4,9 @@ import { ViewTeam } from "../components";
 const About = () => {
   return (
     <>
-      <ViewTeam />
+      <section>
+        <p>about</p>
+      </section>
     </>
   );
 };

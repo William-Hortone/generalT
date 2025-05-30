@@ -9479,6 +9479,11 @@
   "resolved" "https://registry.npmjs.org/react-universal-interface/-/react-universal-interface-0.6.2.tgz"
   "version" "0.6.2"
 
+"react-use-measure@^2.1.7":
+  "integrity" "sha512-KrvcAo13I/60HpwGO5jpW7E9DfusKyLPLvuHlUyP5zqnmAPhNc6qTRjUQrdTADl0lpPpDVU2/Gg51UlOGHXbdg=="
+  "resolved" "https://registry.npmjs.org/react-use-measure/-/react-use-measure-2.1.7.tgz"
+  "version" "2.1.7"
+
 "react-use@^17.6.0":
   "integrity" "sha512-OmedEScUMKFfzn1Ir8dBxiLLSOzhKe/dPZwVxcujweSj45aNM7BEGPb9BEVIgVEqEXx6f3/TsXzwIktNgUR02g=="
   "resolved" "https://registry.npmjs.org/react-use/-/react-use-17.6.0.tgz"

@@ -4,7 +4,7 @@ export const teamData = [
   {
     position: "HOMEOWNER",
     img: images.team1,
-    name: "Christopher JR POUMAYE",
+    name: "Christopher POUMAYE",
     phone: "+8613311876241",
     email: "poumskito8@gmail.com",
     x: "X: @poumskito15",
@@ -13,7 +13,7 @@ export const teamData = [
   {
     position: "DIRECTOR GENERAL",
     img: images.team2,
-    name: "Christ Rousseau Landers YARAFA",
+    name: "Christ Rousseau Landers Y.",
     phone: "+8618505283282 / +23672302835",
     email: "yarafachristlanders@gmail.com",
     x: "",
@@ -22,7 +22,7 @@ export const teamData = [
   {
     position: "MANAGER",
     img: images.team3,
-    name: "Yarafa née Zakaria Mathurine Valérie",
+    name: "Yarafa  Zakaria Mathurine",
     phone: "0023675508705 / +23674126967",
     email: "",
     x: "",
@@ -39,7 +39,7 @@ export const teamData = [
   },
   {
     position: "COMMERCIAL DIRECTORAGER",
-    name: "MIGOLET OBEYE GEFFRY STEEDE",
+    name: "MIGOLET OBEYE GEFFRY ",
     img: images.team5,
     phone: " 0023675508705 / +23674126967",
     email: "steedeobeye@gmail.com",
