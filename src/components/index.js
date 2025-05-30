@@ -15,6 +15,7 @@ import ImagesGallery from "./ImagesGallery";
 import { ImageTrailHero } from "./ImageTrailHero";
 import { LinksOverview } from "./LinksOverview";
 import { ServicesOverview } from "./ServicesOverview";
+import CompanyDesc from "./CompanyDesc";
 
 
 
@@ -35,5 +36,6 @@ export {
   ImagesGallery,
   ImageTrailHero,
   LinksOverview,
-  ServicesOverview
+  ServicesOverview,
+  CompanyDesc
 };

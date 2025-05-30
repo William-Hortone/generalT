@@ -10,36 +10,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-const dataImages = [
-  {
-    id: 1,
-    image: images.pic1,
-    alt: "Cargo"
-  },
-  {
-    id: 2,
-    image: images.pic5,
-    alt: "Export"
-  },
-  {
-    id: 3,
-    image: images.pic3,
-    alt: "Connectivity"
-  },
-  {
-    id: 4,
-    image: images.product14,
-    alt: "Logistics"
-  }
-]
+// const dataImages = [
+//   {
+//     id: 1,
+//     image: images.pic1,
+//     alt: "Cargo"
+//   },
+//   {
+//     id: 2,
+//     image: images.pic5,
+//     alt: "Export"
+//   },
+//   {
+//     id: 3,
+//     image: images.pic3,
+//     alt: "Connectivity"
+//   },
+//   {
+//     id: 4,
+//     image: images.product14,
+//     alt: "Logistics"
+//   }
+// ]
 
-const IntroHead = () => {
+const IntroHead = ({ dataImages, text, linksData }) => {
   const leftRef = useRef(null);
   const rightRef = useRef(null);
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const listRef = useRef(null);
-  const text = "services";
+  // const text = "services";
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -51,8 +51,6 @@ const IntroHead = () => {
     }, 5000);
     return () => clearInterval(interval);
   })
-
-
 
 
 
@@ -135,7 +133,7 @@ const IntroHead = () => {
     >
       <div
         ref={leftRef}
-        className="flex  relative  flex-col pt-8 overflow-hidden justify-between border-r-2 border-b-2 border-b-neutral-400 border-r-neutral-400 w-full md:w-[50vw]  "
+        className="flex  relative gap-16 flex-col pt-8 overflow-hidden  border-r-2 border-b-2 border-b-neutral-400 border-r-neutral-400 w-full md:w-[50vw]  "
       >
         {/* Image Header */}
 
@@ -144,24 +142,15 @@ const IntroHead = () => {
 
         </div>
 
-        <LinksOverview />
+        {/*  Links */}
+        <div>
+          {linksData.map((item, index) => (
+            <LinksOverview key={index} item={item} />
 
-        {/* services list */}
-        {/* <ul ref={listRef} className="flex flex-col">
-          {list.map((item, index) => (
-            <li
-              key={index}
-              className="relative w-full h-auto py-4 border-b-2 whitespace-nowrap group border-b-lightBlack-100"
-            >
-              {item.text}
-              <div className="absolute top-0 left-0 transition-all duration-300 ease-in-out scale-95 translate-y-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100">
-                <CardImg img={item.img} />
-              </div>
-            </li>
           ))}
-        </ul> */}
-        {/* <span /> */}
-        {/* <p className="absolute hidden font-bold uppercase whitespace-nowrap animate-move-up left-8 md:block text-primary">Geneal Kouta</p> */}
+        </div>
+
+
       </div>
 
       <div

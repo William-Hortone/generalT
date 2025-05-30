@@ -9,8 +9,8 @@ import "./navbar.css";
 
 const navItems = [
   { title: "Home", link: "/" },
+  { title: "About", link: "/about" },
   { title: "Services", link: "/services" },
-  // { title: "Customer", link: "/customer" },
   { title: "Gallery", link: "/gallery" },
 ];
 
@@ -104,6 +104,15 @@ const NavBar = ({ bg }) => {
               Home
             </Link>
           </li>
+             <li>
+            <Link
+              to="/about"
+              className="link"
+              onClick={() => setShowMenu(false)}
+            >
+              About
+            </Link>
+          </li>
           <li>
             <Link
               to="/services"
@@ -113,15 +122,7 @@ const NavBar = ({ bg }) => {
               Services
             </Link>
           </li>
-          {/* <li>
-            <Link
-              to="/customer"
-              className="link"
-              onClick={() => setShowMenu(false)}
-            >
-              Customer
-            </Link>
-          </li> */}
+       
           <li>
             <Link
               to="/gallery"

@@ -92,7 +92,50 @@ export const teamData = [
     location: "",
   },
 ];
-
+export const dataImages = [
+  {
+    id: 1,
+    image: images.pic1,
+    alt: "Cargo"
+  },
+  {
+    id: 2,
+    image: images.pic5,
+    alt: "Export"
+  },
+  {
+    id: 3,
+    image: images.pic3,
+    alt: "Connectivity"
+  },
+  {
+    id: 4,
+    image: images.product14,
+    alt: "Logistics"
+  }
+]
+export const dataAboutImages = [
+  {
+    id: 1,
+    image: images.pic6,
+    alt: "Cargo"
+  },
+  {
+    id: 2,
+    image: images.pic2,
+    alt: "Export"
+  },
+  {
+    id: 3,
+    image: images.pic18,
+    alt: "Connectivity"
+  },
+  {
+    id: 4,
+    image: images.article18,
+    alt: "Logistics"
+  }
+]
 export const galleryImages = [
   {
     img: images.article1,
@@ -152,7 +195,62 @@ export const galleryImages = [
     img: images.product3,
   },
 ];
+export const servicesLinksData = [
+  {
+    heading: "Seamless Trade Connectivity",
+    subheading: "",
+    href: "#",
+    img: images.pic1,
+  },
+  {
+    heading: "AI-Driven Solutions",
+    subheading: "We work with great people",
+    href: "#",
+    img: images.pic4,
+  },
+  {
+    heading: "Sustainable Energy and Infrastructure",
+    subheading: "",
+    href: "#",
+    img: images.product2,
+  },
+  {
+    heading: "Seamless Transactions and Customer Support",
+    subheading: "",
+    href: "#",
+    img: images.pic10,
+  },
 
+
+];
+export const aboutLinksData = [
+  {
+    heading: "Company Presentation",
+    subheading: "",
+    href: "#",
+    img: images.pic1,
+  },
+  {
+    heading: "Company Overview",
+    subheading: "We work with great people",
+    href: "#",
+    img: images.pic4,
+  },
+  {
+    heading: "Sustainable Energy and Infrastructure",
+    subheading: "",
+    href: "#",
+    img: images.product2,
+  },
+  // {
+  //   heading: "Seamless Transactions and Customer Support",
+  //   subheading: "",
+  //   href: "#",
+  //   img: images.pic10,
+  // },
+
+
+];
 
 export const list = [
 

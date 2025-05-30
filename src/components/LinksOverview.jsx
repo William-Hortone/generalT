@@ -1,40 +1,20 @@
-import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import images from "../constants/images";
 
-export const LinksOverview = () => {
+export const LinksOverview = ({ item }) => {
   return (
-    <section className="py-4 pl-8 bgs-neutral-950 md:py-8 md:pl-8">
+    <section className="pl-8 bgs-neutral-950 md:pl-8">
       <div className="max-w-5xl mx-auto">
         <Link
-          heading="Seamless Trade Connectivity"
-          imgSrc={images.pic1}
-          href="#"
+          item={item}
         />
-        <Link
-          heading="AI-Driven Solutions"
-          subheading="We work with great people"
-          imgSrc={images.pic4}
-          href="#"
-        />
-        <Link
-          heading="Sustainable Energy and Infrastructure"
-          imgSrc={images.product2}
-          href="#"
-        />
-        <Link
-          heading="Seamless Transactions and Customer Support"
-          imgSrc={images.pic10}
-          href="#"
-        />
-
       </div>
     </section>
   );
 };
 
-const Link = ({ heading, imgSrc, href }) => {
+const Link = ({ item }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -64,7 +44,7 @@ const Link = ({ heading, imgSrc, href }) => {
 
   return (
     <motion.a
-      href={href}
+      href={item.href}
       ref={ref}
       onMouseMove={handleMouseMove}
       initial="initial"
@@ -84,7 +64,7 @@ const Link = ({ heading, imgSrc, href }) => {
           }}
           className="relative z-10 block text-xl font-bold transition-colors duration-500 md:whitespace-nowrap text-neutral-500 group-hover:text-black md:text-2xl"
         >
-          {heading.split("").map((l, i) => (
+          {item.heading.split("").map((l, i) => (
             <motion.span
               variants={{
                 initial: { x: 0 },
@@ -115,9 +95,9 @@ const Link = ({ heading, imgSrc, href }) => {
           whileHover: { scale: 1, rotate: "12.5deg" },
         }}
         transition={{ type: "spring" }}
-        src={imgSrc}
+        src={item.img}
         className="absolute z-0 object-cover w-32 h-24 rounded-lg md:h-48 md:w-64"
-        alt={`Image representing a link for ${heading}`}
+        alt={`Image representing a link for ${item.heading}`}
       />
 
       <motion.div

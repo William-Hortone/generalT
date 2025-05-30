@@ -111,13 +111,9 @@ const TranslateWrapper = ({ children, reverse }) => {
 };
 
 const MouseImageTrail = ({
-    children,
-    // List of image sources
+    children, 
     images,
-    // Will render a new image every X pixels between mouse moves
     renderImageBuffer,
-    // images will be rotated at a random number between zero and rotationRange,
-    // alternating between a positive and negative rotation
     rotationRange,
 }) => {
     const [scope, animate] = useAnimate();
