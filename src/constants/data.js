@@ -13,7 +13,7 @@ export const teamData = [
   {
     position: "DIRECTOR GENERAL",
     img: images.team2,
-    name: "Christ Rousseau Landers Y.",
+    name: "Christ Rousseau",
     phone: "+8618505283282 / +23672302835",
     email: "yarafachristlanders@gmail.com",
     x: "",
@@ -22,7 +22,7 @@ export const teamData = [
   {
     position: "MANAGER",
     img: images.team3,
-    name: "Yarafa  Zakaria Mathurine",
+    name: "Yarafa Mathurine",
     phone: "0023675508705 / +23674126967",
     email: "",
     x: "",
@@ -31,7 +31,7 @@ export const teamData = [
   {
     position: "COMMUNICATION OFFICER",
     img: images.team4,
-    name: "DENNIS ROXZANE BERNADETTE",
+    name: "DENNIS BERNADETTE",
     phone: "0023675508705 / +23674126967",
     email: "Roxzanedennis@outlook.com",
     x: "",
@@ -39,7 +39,7 @@ export const teamData = [
   },
   {
     position: "COMMERCIAL DIRECTORAGER",
-    name: "MIGOLET OBEYE GEFFRY ",
+    name: "MIGOLET GEFFRY ",
     img: images.team5,
     phone: " 0023675508705 / +23674126967",
     email: "steedeobeye@gmail.com",
@@ -49,7 +49,7 @@ export const teamData = [
   {
     position: "MARKETING DIRECTOR",
     img: images.team6,
-    name: "Yarafa née Zakaria Mathurine Valérie",
+    name: "Ludovic kongoussa",
     phone: " 0023675508705 / +23674126967",
     email: "",
     x: "",
@@ -76,7 +76,7 @@ export const teamData = [
   {
     position: "Human Resources Manager",
     img: images.team9,
-    name: "Bernicia KoyambaitouE",
+    name: "Bernicia Koyambaitou",
     phone: "",
     email: "",
     x: "",
@@ -84,7 +84,7 @@ export const teamData = [
   },
   {
     position: "Assistant Director",
-    name: "Jean Paul FIOBOY",
+    name: "Jean FIOBOY",
     img: images.team10,
     phone: "",
     email: "",
@@ -117,24 +117,24 @@ export const dataImages = [
 export const dataAboutImages = [
   {
     id: 1,
-    image: images.pic6,
+    image: images.about,
     alt: "Cargo"
   },
   {
     id: 2,
-    image: images.pic2,
+    image: images.about1,
     alt: "Export"
   },
   {
     id: 3,
-    image: images.pic18,
+    image: images.about2,
     alt: "Connectivity"
   },
-  {
-    id: 4,
-    image: images.article18,
-    alt: "Logistics"
-  }
+  // {
+  //   id: 4,
+  //   image: images.article18,
+  //   alt: "Logistics"
+  // }
 ]
 export const galleryImages = [
   {
@@ -237,7 +237,7 @@ export const aboutLinksData = [
     img: images.pic4,
   },
   {
-    heading: "Sustainable Energy and Infrastructure",
+    heading: "Meeting Our Team",
     subheading: "",
     href: "#",
     img: images.product2,

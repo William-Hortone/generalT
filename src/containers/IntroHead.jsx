@@ -1,45 +1,20 @@
-import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 import { BsArrowDown } from "react-icons/bs";
-import images from "../constants/images";
-import { CardImg, LinksOverview } from "../components";
-import { list } from "../constants/data";
+import { LinksOverview } from "../components";
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 
-// const dataImages = [
-//   {
-//     id: 1,
-//     image: images.pic1,
-//     alt: "Cargo"
-//   },
-//   {
-//     id: 2,
-//     image: images.pic5,
-//     alt: "Export"
-//   },
-//   {
-//     id: 3,
-//     image: images.pic3,
-//     alt: "Connectivity"
-//   },
-//   {
-//     id: 4,
-//     image: images.product14,
-//     alt: "Logistics"
-//   }
-// ]
 
 const IntroHead = ({ dataImages, text, linksData }) => {
   const leftRef = useRef(null);
   const rightRef = useRef(null);
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
-  const listRef = useRef(null);
-  // const text = "services";
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

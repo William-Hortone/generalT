@@ -26,7 +26,7 @@ const CompanyDesc = () => {
     };
 
     return (
-        <section className="px-4 py-[10rem] overflow-hidden bg-neutral-100">
+        <section className="px-4 py-[15rem] overflow-hidden bg-white bdg-neutral-100">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between gap-4 mb-8">
                     <h2 className="text-4xl font-bold leading-[1.2] md:text-5xl">
@@ -68,7 +68,7 @@ const Feature = ({ position, index, title, secondDesc, description, Icon, title1
                 ease: "easeInOut",
                 duration: 0.35,
             }}
-            className={`relative flex min-h-[250px] w-10/12 max-w-lg shrink-0 flex-col justify-between overflow-hidden p-8 shadow-lg md:w-3/5 ${index % 2 ? "bg-black text-white" : " bg-white"
+            className={`relative flex min-h-[250px] w-10/12 max-w-lg shrink-0 flex-col justify-between overflow-hidden p-8 shadow-lg md:w-3/5 ${index % 2 ? "bg-black text-white" : " bg-neutral-100"
                 }`}
         >
             <Icon className="absolute right-2 top-2 text-7xl opacity-20" />

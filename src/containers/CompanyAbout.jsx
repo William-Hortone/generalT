@@ -4,7 +4,7 @@ import images from "../constants/images";
 
 const CompanyAbout = () => {
     return (
-        <section className="grid items-center  w-full max-w-6xl grid-cols-1 gap-8 px-8 my-[8rem] py-12 mx-auto md:grid-cols-2">
+        <section className="grid items-center bg-[#ffff]  w-full max-w-6xl grid-cols-1 gap-8 px-8 my-[8rem] py-12 mx-auto md:grid-cols-2">
             <div>
                 {/* <span className="block mb-4 text-xs font-medium text-indigo-500 md:text-sm">
                     Better every day
