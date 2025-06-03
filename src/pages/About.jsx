@@ -5,7 +5,7 @@ import { CompanyAbout, IntroHead, TeamOverview } from "../containers";
 const About = () => {
   return (
     <>
-      <section className="bg-whidte">
+      <section className="">
         <Navbar bg='black' />
         <IntroHead text="About " dataImages={dataAboutImages} linksData={aboutLinksData} />
         <CompanyAbout />
@@ -13,9 +13,7 @@ const About = () => {
         <div className="bg-white">
           <TeamOverview />
         </div>
-
         <Footer />
-        {/* <p>about</p> */}
       </section>
     </>
   );

@@ -114,28 +114,8 @@ export const dataImages = [
     alt: "Logistics"
   }
 ]
-export const dataAboutImages = [
-  {
-    id: 1,
-    image: images.about,
-    alt: "Cargo"
-  },
-  {
-    id: 2,
-    image: images.about1,
-    alt: "Export"
-  },
-  {
-    id: 3,
-    image: images.about2,
-    alt: "Connectivity"
-  },
-  // {
-  //   id: 4,
-  //   image: images.article18,
-  //   alt: "Logistics"
-  // }
-]
+
+// Gallery images
 export const galleryImages = [
   {
     img: images.article1,
@@ -195,52 +175,54 @@ export const galleryImages = [
     img: images.product3,
   },
 ];
+// Services Links Data
 export const servicesLinksData = [
   {
     heading: "Seamless Trade Connectivity",
     subheading: "",
-    href: "#",
+    href: "#electronic",
     img: images.pic1,
-  },
-  {
-    heading: "AI-Driven Solutions",
-    subheading: "We work with great people",
-    href: "#",
-    img: images.pic4,
   },
   {
     heading: "Sustainable Energy and Infrastructure",
     subheading: "",
-    href: "#",
+    href: "#beautyProducts",
     img: images.product2,
   },
   {
     heading: "Seamless Transactions and Customer Support",
     subheading: "",
-    href: "#",
+    href: "#aiDrivenSolutions",
     img: images.pic10,
+  },
+  {
+    heading: "AI-Driven Solutions",
+    subheading: "We work with great people",
+    href: "#aiDriven",
+    img: images.pic4,
   },
 
 
 ];
+// About Links Data
 export const aboutLinksData = [
   {
     heading: "Company Presentation",
     subheading: "",
-    href: "#",
-    img: images.pic1,
+    href: "#companyAbout",
+    img: images.about,
   },
   {
     heading: "Company Overview",
     subheading: "We work with great people",
-    href: "#",
-    img: images.pic4,
+    href: "#companyOverview",
+    img: images.about2,
   },
   {
     heading: "Meeting Our Team",
     subheading: "",
-    href: "#",
-    img: images.product2,
+    href: "#meetTeam",
+    img: images.about1,
   },
   // {
   //   heading: "Seamless Transactions and Customer Support",
@@ -251,7 +233,7 @@ export const aboutLinksData = [
 
 
 ];
-
+//  Services   data list 
 export const list = [
 
   {
@@ -274,6 +256,26 @@ export const list = [
     img: images.pic10,
   },
 ]
+//  About   data list 
+export const dataAboutImages = [
+  {
+    id: 1,
+    image: images.about,
+    alt: "Cargo"
+  },
+  {
+    id: 2,
+    image: images.about1,
+    alt: "Export"
+  },
+  {
+    id: 3,
+    image: images.about2,
+    alt: "Connectivity"
+  },
+
+]
+// Hover square data
 export const squareData = [
   { id: 1, src: images.pic1 },
   { id: 2, src: images.article1 },

@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import images from "../constants/images";
+import { Link } from "react-router-dom";
 
 export const ServicesOverview = () => {
     return (
@@ -40,9 +41,9 @@ const Copy = () => {
                 meticulously source items to ensure quality and reliability.
             </p>
 
-            <a href="/services" className="px-4 py-2 mt-8 text-sm font-bold text-indigo-100 uppercase bg-indigo-500 rounded-full hover:bg-indigo-600 w-fit">
+            <Link to="/services" className="px-4 py-2 mt-8 text-sm font-bold text-indigo-100 uppercase rounded-full bg-primary hover:bg-indigo-600 w-fit">
                 View Services
-            </a>
+            </Link>
         </div>
     );
 };

@@ -15,7 +15,7 @@ module.exports = {
         "robert-regular": ["robert-regular", "sans-serif"],
       },
       colors: {
-        primary: "#C02C2F",
+        primary: "#6366F1",
         lightBlack: {
           100: "#00000079",
           200: "#F6F6F6",
