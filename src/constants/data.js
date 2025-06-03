@@ -274,3 +274,21 @@ export const list = [
     img: images.pic10,
   },
 ]
+export const squareData = [
+  { id: 1, src: images.pic1 },
+  { id: 2, src: images.article1 },
+  { id: 3, src: images.article10 },
+  { id: 4, src: images.article15 },
+  { id: 5, src: images.article16 },
+  { id: 6, src: images.article13 },
+  { id: 7, src: images.product11 },
+  { id: 8, src: images.article12 },
+  { id: 9, src: images.pic3 },
+  { id: 10, src: images.article1 },
+  { id: 11, src: images.article12 },
+  { id: 12, src: images.article13 },
+  { id: 13, src: images.article15 },
+  { id: 14, src: images.article1 },
+  { id: 15, src: images.article3 },
+  { id: 16, src: images.article1 },
+];
