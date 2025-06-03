@@ -7,55 +7,9 @@ import images from "../constants/images";
 gsap.registerPlugin(ScrollTrigger);
 
 const EnergySub = () => {
-  //   const itemContent = useRef(null);
-
-  //   useEffect(() => {
-  //     gsap.to(itemContent.current, {
-  //       x: "-50%",
-  //       ease: "none",
-  //       scrollTrigger: {
-  //         trigger: itemContent.current,
-  //         start: "top bottom",
-  //         end: "+=800",
-  //         scrub: true,
-  //       },
-  //     });
-  //   }, []);
-
-  //   useGSAP(() => {
-  //     // Clip path animation
-  //     gsap.set("#image-frame", {
-  //       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-  //       borderRadius: "0% 0% 0% 0%",
-  //     });
-
-  //     gsap.from("#image-frame", {
-  //       clipPath: "polygon(12% 0, 70% 0, 85% 88%, 0 93%)",
-  //       borderRadius: "0% 0% 35% 8%",
-  //       ease: "power1.inOut",
-  //       scrollTrigger: {
-  //         trigger: "#image-frame",
-  //         start: "center center",
-  //         end: "bottom center",
-  //         scrub: true,
-  //       },
-  //     });
-
-  //     // Scroll-triggered border bottom animation
-  //     gsap.to("#scroll-border", {
-  //       scaleX: 1,
-  //       ease: "power1.out",
-  //       scrollTrigger: {
-  //         trigger: "#image-frame",
-  //         start: "top bottom",
-  //         end: "center center",
-  //         scrub: true,
-  //       },
-  //     });
-  //   });
 
   return (
-    <section className="flex flex-col w-full h-auto py-8 pb-20 mt-20 bg-secondary ">
+    <section id="aiDriven" className="flex flex-col w-full h-auto py-8 pb-20 mt-20 bg-secondary ">
       <div>
         <h2 className="p-8 text-3xl font-semibold uppercase text-primary md:text-xl font-zentry">
           AI-Driven Solutions

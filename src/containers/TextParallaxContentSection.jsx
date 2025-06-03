@@ -9,6 +9,7 @@ export const TextParallaxContentSection = () => {
         imgUrl={images.product28}
         subheading="Electronic"
         heading="Seamless Trade Connectivity"
+        id='electronic'
       >
         <ExampleContent
           title='Electronic'
@@ -29,6 +30,7 @@ diverse needs of modern life'
         imgUrl={images.product14}
         subheading="Beauty Products"
         heading="Seamless Trade Connectivity"
+               id='beautyProducts'
       >
         <ExampleContent
           title='Beauty Products'
@@ -52,6 +54,7 @@ wellness'
         imgUrl={images.pic16}
         subheading=""
         heading="AI-Driven Solutions"
+        id='aiDrivenSolutions'
       >
         <ExampleContent
           title='AI-Driven Solutions'
@@ -72,7 +75,7 @@ efficiency and promoting growth.'
 
 const IMG_PADDING = 12;
 
-const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+const TextParallaxContent = ({ imgUrl,id, subheading, heading, children }) => {
   return (
     <div
       style={{
@@ -81,7 +84,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
       }}
     >
       <div className="relative h-[150vh]">
-        <StickyImage imgUrl={imgUrl} />
+        <StickyImage imgUrl={imgUrl} id={id}/>
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
       {children}
@@ -89,7 +92,7 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
   );
 };
 
-const StickyImage = ({ imgUrl }) => {
+const StickyImage = ({ imgUrl, id }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -108,9 +111,11 @@ const StickyImage = ({ imgUrl }) => {
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
+        
       }}
       ref={targetRef}
       className="sticky z-0 overflow-hidden rounded-3xl"
+      id={id}
     >
       <motion.div
         className="absolute inset-0 bg-neutral-950/70"

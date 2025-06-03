@@ -26,7 +26,7 @@ const CompanyDesc = () => {
     };
 
     return (
-        <section className="px-4 py-[15rem] overflow-hidden bg-white bdg-neutral-100">
+        <section id="companyOverview" className="px-4 py-[15rem] overflow-hidden bg-white bdg-neutral-100">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between gap-4 mb-8">
                     <h2 className="text-4xl font-bold leading-[1.2] md:text-5xl">

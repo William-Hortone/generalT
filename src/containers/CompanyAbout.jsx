@@ -5,7 +5,7 @@ import {squareData} from "../constants/data";
 
 const CompanyAbout = () => {
     return (
-        <section className="grid items-center bg-[#ffff]  w-full max-w-6xl grid-cols-1 gap-8 px-8 my-[8rem] py-12 mx-auto md:grid-cols-2">
+        <section id="companyAbout" className="grid items-center bg-[#ffff]  w-full max-w-6xl grid-cols-1 gap-8 px-8 my-[8rem] py-12 mx-auto md:grid-cols-2">
             <div>
                 <h3 className="text-4xl font-semibold md:text-6xl">
                     GTTK

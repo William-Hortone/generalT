@@ -41,7 +41,7 @@ const TeamOverview = () => {
     };
 
     return (
-        <section className="pb-[10rem]" ref={ref}>
+        <section id="meetTeam" className="pb-[10rem]" ref={ref}>
             <div className="relative p-4 overflow-hidden">
                 {/* CARDS */}
                 <div className="max-w-6xl mx-auto">

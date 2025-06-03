@@ -144,7 +144,7 @@ const IntroHead = ({ dataImages, text, linksData }) => {
         </h1>
 
         <div className="relative hidden md:block">
-          <BsArrowDown color="#C02C2F" className="scroll-arrow" size={50} />
+          <BsArrowDown color="#6366F1" className="scroll-arrow" size={50} />
         </div>
       </div>
     </section>
