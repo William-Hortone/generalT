@@ -1,12 +1,13 @@
-import { Footer, Navbar, ServiceDisc } from "../components";
+import { Footer, Navbar } from "../components";
+import { dataImages, servicesLinksData } from "../constants/data";
 import { EnergySub, IntroHead, TextParallaxContentSection } from "../containers";
 
 const Services = () => {
   return (
-    <section className="w-full h-auto overflow-hidden bg-white s-customer">
+    <section className="w-full h-auto bg-white s-customer">
       <Navbar bg='black' />
-      <IntroHead />
-      <ServiceDisc />
+      <IntroHead text="Services" dataImages={dataImages} linksData={servicesLinksData} />
+      {/* <ServiceDisc /> */}
       <TextParallaxContentSection />
       <EnergySub />
       <Footer />

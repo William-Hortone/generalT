@@ -1,11 +1,21 @@
-import React from "react";
-import { ViewTeam } from "../components";
+import { CompanyDesc, Footer, Navbar } from "../components";
+import { aboutLinksData, dataAboutImages } from "../constants/data";
+import { CompanyAbout, IntroHead, TeamOverview } from "../containers";
 
 const About = () => {
   return (
     <>
-      <section>
-        <p>about</p>
+      <section className="bg-whidte">
+        <Navbar bg='black' />
+        <IntroHead text="About " dataImages={dataAboutImages} linksData={aboutLinksData} />
+        <CompanyAbout />
+        <CompanyDesc />
+        <div className="bg-white">
+          <TeamOverview />
+        </div>
+
+        <Footer />
+        {/* <p>about</p> */}
       </section>
     </>
   );

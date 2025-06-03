@@ -5,7 +5,7 @@ import images from "../constants/images";
 export const ServicesOverview = () => {
     return (
         <>
-            <div className="relative min-h-[300vh] mt-[10rem] ">
+            <div className="relative min-h-[270vh] mt-[10rem] ">
                 <Features />
             </div>
             {/* <div className="h-[50vh] " /> */}

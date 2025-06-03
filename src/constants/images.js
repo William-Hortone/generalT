@@ -75,6 +75,10 @@ import article16 from "../assets/article16.jpg";
 import article17 from "../assets/article17.jpg";
 import article18 from "../assets/article18.jpg";
 import article19 from "../assets/article19.jpg";
+import about from "../assets/about.jpg";
+import about1 from "../assets/about2.jpg";
+import about2 from "../assets/about3.jpg";
+
 
 
 const images = {
@@ -150,7 +154,10 @@ const images = {
   article12,
   article13,
   article19,
-  hero
+  hero,
+  about,
+  about1,
+  about2
 };
 
 export default images;

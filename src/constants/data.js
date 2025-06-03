@@ -13,7 +13,7 @@ export const teamData = [
   {
     position: "DIRECTOR GENERAL",
     img: images.team2,
-    name: "Christ Rousseau Landers Y.",
+    name: "Christ Rousseau",
     phone: "+8618505283282 / +23672302835",
     email: "yarafachristlanders@gmail.com",
     x: "",
@@ -22,7 +22,7 @@ export const teamData = [
   {
     position: "MANAGER",
     img: images.team3,
-    name: "Yarafa  Zakaria Mathurine",
+    name: "Yarafa Mathurine",
     phone: "0023675508705 / +23674126967",
     email: "",
     x: "",
@@ -31,7 +31,7 @@ export const teamData = [
   {
     position: "COMMUNICATION OFFICER",
     img: images.team4,
-    name: "DENNIS ROXZANE BERNADETTE",
+    name: "DENNIS BERNADETTE",
     phone: "0023675508705 / +23674126967",
     email: "Roxzanedennis@outlook.com",
     x: "",
@@ -39,7 +39,7 @@ export const teamData = [
   },
   {
     position: "COMMERCIAL DIRECTORAGER",
-    name: "MIGOLET OBEYE GEFFRY ",
+    name: "MIGOLET GEFFRY ",
     img: images.team5,
     phone: " 0023675508705 / +23674126967",
     email: "steedeobeye@gmail.com",
@@ -49,7 +49,7 @@ export const teamData = [
   {
     position: "MARKETING DIRECTOR",
     img: images.team6,
-    name: "Yarafa née Zakaria Mathurine Valérie",
+    name: "Ludovic kongoussa",
     phone: " 0023675508705 / +23674126967",
     email: "",
     x: "",
@@ -76,7 +76,7 @@ export const teamData = [
   {
     position: "Human Resources Manager",
     img: images.team9,
-    name: "Bernicia KoyambaitouE",
+    name: "Bernicia Koyambaitou",
     phone: "",
     email: "",
     x: "",
@@ -84,7 +84,7 @@ export const teamData = [
   },
   {
     position: "Assistant Director",
-    name: "Jean Paul FIOBOY",
+    name: "Jean FIOBOY",
     img: images.team10,
     phone: "",
     email: "",
@@ -92,7 +92,50 @@ export const teamData = [
     location: "",
   },
 ];
-
+export const dataImages = [
+  {
+    id: 1,
+    image: images.pic1,
+    alt: "Cargo"
+  },
+  {
+    id: 2,
+    image: images.pic5,
+    alt: "Export"
+  },
+  {
+    id: 3,
+    image: images.pic3,
+    alt: "Connectivity"
+  },
+  {
+    id: 4,
+    image: images.product14,
+    alt: "Logistics"
+  }
+]
+export const dataAboutImages = [
+  {
+    id: 1,
+    image: images.about,
+    alt: "Cargo"
+  },
+  {
+    id: 2,
+    image: images.about1,
+    alt: "Export"
+  },
+  {
+    id: 3,
+    image: images.about2,
+    alt: "Connectivity"
+  },
+  // {
+  //   id: 4,
+  //   image: images.article18,
+  //   alt: "Logistics"
+  // }
+]
 export const galleryImages = [
   {
     img: images.article1,
@@ -152,7 +195,62 @@ export const galleryImages = [
     img: images.product3,
   },
 ];
+export const servicesLinksData = [
+  {
+    heading: "Seamless Trade Connectivity",
+    subheading: "",
+    href: "#",
+    img: images.pic1,
+  },
+  {
+    heading: "AI-Driven Solutions",
+    subheading: "We work with great people",
+    href: "#",
+    img: images.pic4,
+  },
+  {
+    heading: "Sustainable Energy and Infrastructure",
+    subheading: "",
+    href: "#",
+    img: images.product2,
+  },
+  {
+    heading: "Seamless Transactions and Customer Support",
+    subheading: "",
+    href: "#",
+    img: images.pic10,
+  },
 
+
+];
+export const aboutLinksData = [
+  {
+    heading: "Company Presentation",
+    subheading: "",
+    href: "#",
+    img: images.pic1,
+  },
+  {
+    heading: "Company Overview",
+    subheading: "We work with great people",
+    href: "#",
+    img: images.pic4,
+  },
+  {
+    heading: "Meeting Our Team",
+    subheading: "",
+    href: "#",
+    img: images.product2,
+  },
+  // {
+  //   heading: "Seamless Transactions and Customer Support",
+  //   subheading: "",
+  //   href: "#",
+  //   img: images.pic10,
+  // },
+
+
+];
 
 export const list = [
 
@@ -176,3 +274,21 @@ export const list = [
     img: images.pic10,
   },
 ]
+export const squareData = [
+  { id: 1, src: images.pic1 },
+  { id: 2, src: images.article1 },
+  { id: 3, src: images.article10 },
+  { id: 4, src: images.article15 },
+  { id: 5, src: images.article16 },
+  { id: 6, src: images.article13 },
+  { id: 7, src: images.product11 },
+  { id: 8, src: images.article12 },
+  { id: 9, src: images.pic3 },
+  { id: 10, src: images.article1 },
+  { id: 11, src: images.article12 },
+  { id: 12, src: images.article13 },
+  { id: 13, src: images.article15 },
+  { id: 14, src: images.article1 },
+  { id: 15, src: images.article3 },
+  { id: 16, src: images.article1 },
+];

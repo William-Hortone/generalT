@@ -41,14 +41,14 @@ const TeamOverview = () => {
     };
 
     return (
-        <section className="mb-[10rem]" ref={ref}>
+        <section className="pb-[10rem]" ref={ref}>
             <div className="relative p-4 overflow-hidden">
                 {/* CARDS */}
                 <div className="max-w-6xl mx-auto">
                     {/* <p className="mb-4 text-2xl font-semibold">
                         Meet our. <span className="text-slate-500"></span>
                     </p> */}
-                    <h2 className="text-black special-font title-heading mb-9">
+                    <h2 className="mb-20 text-black special-font title-heading">
                         Meet our Te<b>a</b>m
                     </h2>
                     <motion.div
@@ -105,10 +105,10 @@ const Card = ({ item }) => {
             }}
         >
             <div className="absolute inset-0 z-20 rounded-2xl bg-gradient-to-t from-black/90 via-black/60 to-black/0 p-6 text-white transition-[backdrop-filter] backdrop-blur-sm hover:backdrop-blur-none">
-                <span className="text-xs font-bold uppercase text-violet-300">
+                <span className="text-xs font-bold uppercase text-violet-600">
                     {item.position}
                 </span>
-                <p className="absolute my-2 text-3xl font-bold left-2 bottom-4">{item.name}</p>
+                <p className="absolute my-2 text-3xl font-bold capitalize left-2 bottom-4">{item.name}</p>
             </div>
         </div>
     );
